@@ -1,0 +1,40 @@
+.page-loader{z-index:1000000;width:100vw;height:100vh;background-color:#F1D06D;flex-direction:column;justify-content:flex-end;align-items:center;padding:1em;font-style:normal;display:none;position:fixed;top:0%;bottom:0%;left:0%;right:0%}
+.loader__inner{width:100%;height:100%;background-color:#1D1C19;perspective-origin:50% 100%;border-radius:24px;flex-direction:column;justify-content:center;align-items:center;display:flex;position:relative}
+.page-loader .loader-cut{position:absolute;right:0px;bottom:0px;}
+.loader__image svg{width:128px;height:128px;transform:translate(2px,2px);}
+.loader-cut .loader__image{width:100%;display:inline-block;height:100%;}
+.loader-cut{width:128px;height:128px;}
+.loader-cut.active{animation:slide-up 3s;opacity:1;}
+.loader__image svg{max-width:100%;}
+.page-loader .loader-cut .loader_number{font-size:25px;font-weight:600;position:absolute;right:0px;bottom:0px;left:30px;top:30px;display:flex;justify-content:center;align-items:center;}
+.irotate{text-align:center;margin:0 auto;padding:10% 0;display:block;}
+.thisis{display:inline-block;vertical-align:middle;height:54px;}
+.slidem{overflow:hidden;text-align:left;min-width:180px;}
+.h2-text{font-size:36px;color:#F1D06D;font-weight:600;}
+.opacity-04{opacity:.4;}
+
+@keyframes slide-up{
+	0%{opacity:1;width:100px;height:100px;}
+	25%{opacity:1;width:128px;height:128px;}
+	50%{opacity:1;width:128px;height:128px;}
+	75%{opacity:1;width:128px;height:128px;}
+	100%{opacity:1;width:128px;height:128px;}
+}
+@media (max-width:767.98px){
+	.h2-text{font-size:20px;}
+	.slidem{min-width:96px;}
+	.thisis{height:28px;}
+	.loader__image svg{width:100px;height:100px;transform:translate(2px,2px);}
+	.loader-cut .loader__image{width:100%;display:inline-block;height:100%;}
+	.loader-cut{width:100px;height:100px;}
+	.loader-cut.active{animation:slide-up 3s;opacity:1;}
+	.loader__image svg{max-width:100%;}
+	.page-loader .loader-cut .loader_number{font-size:20px;font-weight:600;position:absolute;right:0px;bottom:0px;left:30px;top:30px;display:flex;justify-content:center;align-items:center;}
+	@keyframes slide-up{
+		0%{opacity:1;width:80px;height:80px;}
+		25%{opacity:1;width:100px;height:100px;}
+		50%{opacity:1;width:100px;height:100px;}
+		75%{opacity:1;width:100px;height:100px;}
+		100%{opacity:1;width:100px;height:100px;}
+	}
+}
