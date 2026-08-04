@@ -87,7 +87,7 @@ h6{font-size:18px;}
 
 /* 04 : Paragraph Style CSS BOF
 =================================================== */
-p{line-height:28px;font-family:'Geist',sans-serif;color:#7F8081;font-size:16px;font-weight:normal;font-style:normal;margin-bottom:16px;font-weight:normal;}
+p{line-height:1.6;font-family:'Geist',sans-serif;color:#7F8081;font-size:16px;font-weight:normal;font-style:normal;margin-bottom:16px;font-weight:normal;}
 
 /* 05 : Image Style CSS BOF
 =================================================== */
@@ -155,7 +155,7 @@ button.slick-next.slick-arrow:after{content:'\f105';font-size:23px;font-family:f
 .wpcf7 form.invalid .wpcf7-response-output,.wpcf7 form.unaccepted .wpcf7-response-output,.wpcf7 form.payment-required .wpcf7-response-output{color:#fff;padding:10px;}
 .wpcf7-not-valid-tip{font-size:15px;}
 .banner-sec{background:#fff;min-height:calc(100vh - 140px);display:table;width:100%;padding-right:40px;padding-left:40px;}
-.banner-wrap{padding:80px 0px 50px;display:table-cell;vertical-align:middle;background:url(../images/image/banner-bg.png);background-size:cover;background-repeat:no-repeat;background-position:center;border-radius:clamp(35px,3vw,60px);}
+.banner-wrap{padding:80px 0px 50px;display:table-cell;vertical-align:middle;background:url(../images/image/banner-bg.png);background-size:cover;background-repeat:no-repeat;background-position:center;border-radius:clamp(35px,3vw,60px);box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);}
 .banner-count-main{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:960px;margin-top:60px;}
 .banner-v-img{position:relative;width:100%;}
 .banner-v-img img{max-width:100%}
@@ -163,9 +163,9 @@ button.slick-next.slick-arrow:after{content:'\f105';font-size:23px;font-family:f
 .banner-speak-team p{font-size:clamp(12px,1.4vw,16px);}
 .banner-sec-img{margin-left:-4%;}
 .banner-text{max-width:700px;}
-h1.banner-heading{margin-bottom:30px;font-size:clamp(36px,3vw,60px);}
+h1.banner-heading{margin-bottom:30px;font-size:clamp(32px,3vw,60px);}
 .banner-sec .banner-text-wrap{display:flex;flex-direction:column;height:100%;}
-.banner-sec .banner-text-wrap p.font18{max-width:800px;margin-bottom:30px;}
+.banner-sec .banner-text-wrap p{max-width:800px;margin-bottom:30px;}
 .banner-sec-img{margin-left:-10%;}
 .banner-speak-team{padding:8px;border-radius:150px;background:rgba(0,0,0,0.1);margin-top:20px;}
 .banner-wrap .container-fluid{max-width:1840px;}
@@ -187,6 +187,18 @@ h1.banner-heading{margin-bottom:30px;font-size:clamp(36px,3vw,60px);}
 .trusted-companies-main .client-logo{padding:20px 50px;position:relative;}
 .trusted-companies-main .client-logo:after{content:'';position:absolute;top:20px;bottom:20px;border-right:1px solid #000;right:0px;}
 .section-title .sec-title-small{font-size:16px;font-weight:500;color:#000;line-height:20px;display:inline-block;width:100%;margin-bottom:10px;}
+
+
+.trusted-companies-top .trusted-companies-row{display:flex;align-items:center;}
+.trusted-companies-top .trusted-companies-row .trusted-companies-left{width:300px;}
+.trusted-companies-top .trusted-companies-row  .trusted-companies-right{width:calc(100% - 300px);}
+
+.dropdown-click i:before {font-size: 15px;}
+
+.ort-left-sec {max-width: 615px; }
+
+
+
 
 /*@madhavi CSS Start*/
 
@@ -214,7 +226,7 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
 .ani-card-image img{max-height:220px;height:auto;object-fit:contain;}
 
 /* Case studies style */
-.case-studies,.industry-serve,.our-methodology{padding:100px 0;overflow:hidden;}
+.case-studies,.industry-serve,.our-methodology,.our-capabilities{padding:100px 0;overflow:hidden;}
 .p_font_color{color:#7F8081;}
 .sec_typo{color:#0B0C0E;font-size:clamp(1.5rem,2.5vw,2.5rem);}
 .sep-devider{border-color:#DDDDDD;margin:30px 0;opacity:1;}
@@ -297,23 +309,47 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
 .methodology-card .methodology-list li{color:#7F8081;font-weight:300;font-size:18px;padding:5px 4px;}
 .methodology-card .methodology-list li::marker{font-size:14px;}
 .methodology-slide .methodology-card{height:100%;}
-.methodology-slide .methodology-card .method-wrap{padding:0 80px 0 10px;min-width:clamp(320px,45vw,656px);}
+.methodology-slide .methodology-card .method-wrap{padding:0 80px 0 10px;min-width:clamp(350px,42vw,656px);}
 .methodology-slide:first-child .methodology-card .method-wrap{padding-left:0;}
 .methodology-slide:last-child .methodology-card .method-wrap{padding-right:0;}
 .methodology-slide:last-child .methodology-card{overflow:hidden;}
 .methodology-sl-main .slick-list{overflow:visible;display:flex!important;flex-wrap:nowrap;}
 .methodology-sl-main .slick-track{display:flex!important;flex-wrap:nowrap;}
 .methodology-rtl .slick-slide{cursor:ew-resize;}
-.methodology-rtl .borderline{display:block;position:relative;overflow:hidden;width:100%;height:2px;margin:20px 0;background:#DDDDDD;transition:0.4s ease;-webkit-transition:0.4s ease;-moz-transition:0.4s ease;-ms-transition:0.4s ease;-o-transition:0.4s ease;}
+.methodology-rtl .borderline{display:block;position:relative;overflow:hidden;width:100%;height:2px;margin:20px 0;background:rgba(221,221,221,30%);transition:0.4s ease;-webkit-transition:0.4s ease;-moz-transition:0.4s ease;-ms-transition:0.4s ease;-o-transition:0.4s ease;}
 .methodology-rtl .borderline_fill{position:absolute;left:0;top:0;width:0;height:100%;background:#FCBC14;transition:width 0.4s ease;-webkit-transition:width 0.4s ease;-moz-transition:width 0.4s ease;-ms-transition:width 0.4s ease;-o-transition:width 0.4s ease;}
 
 /* Active Slide */
 .methodology-rtl .slick-current .borderline_fill{width:100%;}
 .methodology-rtl .slick-current .methodology-number{opacity:1;}
+ul.slick-dots{display:flex;align-items:center;justify-content:center;gap:6px;padding-top:20px;}
+ul.slick-dots button{font-size:0;width:12px;border-radius:2px;border:none;background-color:#dddd;height:4px;transition:width .3s ease,background-color .3s ease;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;-webkit-transition:width .3s ease,background-color .3s ease;-moz-transition:width .3s ease,background-color .3s ease;-ms-transition:width .3s ease,background-color .3s ease;-o-transition:width .3s ease,background-color .3s ease;}
+ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
+
+/* our capabilities */
+.badge_tag{display:inline-flex;align-items:center;gap:10px;border:1px solid #DDDDDD;border-radius:50px;-webkit-border-radius:50px;-moz-border-radius:50px;-ms-border-radius:50px;-o-border-radius:50px;padding:5px 22px;overflow:hidden;font-size:14px;font-weight:400;width:max-content;color:#fff;margin-right:10px;}
+.badge_tag:last-child{margin-right:0;}
+.our-capabilities .capability-left-card{padding:50px 24px;position:relative;z-index:1;overflow:hidden;}
+.our-capabilities .capability-pattern{position:absolute;left:0;top:0;bottom:0;width:100%;pointer-events:none;z-index:-1;height:100%;}
+.our-capabilities .capability-pattern img{display:block;width:100%;height:100%;}
+.our-capabilities .capability-content{padding:50px 0;}
+.our-capabilities .capability-content .sec_typo{margin-bottom:24px;font-size:clamp(36px,4vw,60px);font-weight:400;line-height:1.1;}
+.our-capabilities .capability-right-card{padding:30px;background-color:#fff;border-radius:30px;border:1px solid #DDDDDD;box-shadow:0px 18px 48px -12px rgba(0,0,0,7.06%),0px 6px 18px -8px rgba(0,0,0,5.1%);display:flex;flex-direction:column;}
+.our-capabilities .capability-right-top p{font-size:13px;line-height:1.4;}
+.our-capabilities .capability-right-top{display:flex;align-items:center;gap:30px;justify-content:space-between;flex-wrap:wrap;padding-bottom:24px;}
+.capability-badge{display:inline-flex;width:max-content;padding:5px 12px;border:1px solid #FCBC14;color:#FCBC14;font-size:12px;font-weight:600;border-radius:50px;align-items:center;gap:8px;}
+.capability-label{display:inline-block;font-size:12px;font-weight:700;color:#7F8081;text-transform:uppercase;letter-spacing:1.2px;padding-bottom:12px;}
+.tech-stack{display:flex;flex-wrap:wrap;align-items:center;gap:10px;}
+.tech-stack span{display:inline-block;width:max-content;padding:5px 12px;border-radius:50px;color:#0B0C0E;font-size:13px;font-weight:600;border:1px solid #DDDDDD;}
+.our-capabilities .capability-footer p{font-size:12px;}
+.capability-footer .outline-btn{color:#0B0C0E;font-size:12px;font-weight:700;padding:8px 12px;border-radius:50px;display:inline-flex;width:max-content;align-items:center;gap:8px;border:1px solid #FCBC14;}
+.capability-footer .outline-btn:hover{background-color:#FCBC14;}
+.our-capabilities .capability-footer{display:flex;align-items:end;gap:12px;justify-content:space-between;flex-shrink:0;flex-grow:1;padding-top:100px;}
+.our-capabilities .capability-item:last-child{padding-bottom:0!important;}
 
 /* Media Query of @madhavi */
 @media (max-width:1600px){
-    .case-studies,.industry-serve,.our-methodology{padding:80px 0;}
+    .case-studies,.industry-serve,.our-methodology,.our-capabilities{padding:80px 0;}
     .main-case-slider .cs-category{font-size:12px;}
     .case-studies .case-disc,.our-methodology .method-disc{font-size:16px;}
     .main-case-slider .cs-slide-disc{font-size:18px;margin-bottom:30px;}
@@ -371,7 +407,9 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
     /* methodology CSS */
     .methodology-sl-main{margin:40px 0 0;}
     .methodology-card .methodology-duration{padding:5px 10px;font-size:13px;}
-    .methodology-card .methodology-number{font-size:18px;}
+    .methodology-card .methodology-number{font-size:16px;}
+    .methodology-card .methodology-list li{font-size:15px;padding:5px 2px;}
+    .methodology-card .methodology-icon{width:38px;height:38px;padding:11px;}
 }
 @media (max-width:1199px){
     .sep-devider{margin:20px 0;}
@@ -388,9 +426,15 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
 
     /*  industry CSS */
     .slider-nav-wrapper .slick-slide{padding:8px 12px;font-size:13px;}
+
+    /* methodology CSS */
+    .methodology-slide .methodology-card .method-wrap{padding:0 60px 0 0px;}
+    .methodology-rtl .borderline{margin:10px 0;}
+    .methodology-card .methodology-number{font-size:14px;}
+    .our-methodology .btn-wp{margin-top:20px;}
 }
 @media (max-width:991px){
-    .case-studies,.industry-serve,.our-methodology{padding:60px 0;}
+    .case-studies,.industry-serve,.our-methodology,.our-capabilities{padding:60px 0;}
     .case-studies .case-disc{max-width:100%;margin:4px 0 0;}
     .cs-content-wrap{gap:24px;}
     .main-case-slider .case-image-wrap{margin-bottom:26px;}
@@ -410,6 +454,10 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
     .slider-nav-wrapper{max-width:100%;margin:0 30px;padding:0 50px;}
     .industry-sl-main .main-slick-slider button.slick-prev.slick-arrow{left:0;}
     .industry-sl-main .main-slick-slider button.slick-next.slick-arrow{right:0;}
+
+    /* methodology CSS */
+    .methodology-slide .methodology-card .method-wrap{padding:0 40px 0 0px;}
+    .methodology-card .methodology-list li{font-size:14px;}
 }
 @media (max-width:768px){
     .main-case-slider .cs-slide-disc,.case-studies .case-disc{line-height:1.5;}
@@ -417,6 +465,7 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
     .case-studies-option .cs-optin-item{text-align:start;}
     .case-studies .case-studies-option .cs-optin-item::after{height:30px;}
     .case-studies .case-studies-option .cs-optin-item:nth-child(2)::after{display:none;}
+    .case-studies .pagination-wrap{position:static;padding-top:24px;}
 
     /*  industry CSS */
     .industry-sl-main .industry-slide .indus-slide-disc,.industry-serve .section_heading p{line-height:1.5;}
@@ -425,7 +474,7 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
 @media (max-width:575px){
     .container.c1440{padding:0 16px;}
     .main-case-slider .stats .stats-box::after{display:none;}
-    .main-case-slider .stats{grid-template-columns:1fr;gap:16px;}
+    .main-case-slider .stats{grid-template-columns:repeat(2,1fr);gap:14px;}
     .main-case-slider .stats .stats-box h3{margin-bottom:0;}
     .main-case-slider .cs-slide-disc,.case-studies .case-disc{font-size:15px;}
     .main-case-slider .case-image-wrap{height:300px;}
@@ -440,6 +489,10 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
     .slider-nav-wrapper{margin:0 16px;}
     .industry-sl-main .main-slick-slider .slick-arrow{margin-top:0px;}
     .slider-nav-wrapper .slick-slide{padding:12px 12px;}
+    .methodology-slide .methodology-card .method-wrap{padding:0 30px 0 0px;min-width:100%;}
+    .methodology-card .methodology-icon{width:35px;height:35px;padding:9px;}
+    .methodology-card .methodology-list{padding-left:18px;}
+    .our-methodology .btn-wp{margin-top:16px;}
 }
 
 /*@dev Css Start*/

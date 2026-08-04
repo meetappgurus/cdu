@@ -113,6 +113,11 @@ ul.f-menu li{margin:10px 0px;}
 .new-footer-upper .footer-logo a{display:inline-block;width:100%;}
 
 
+.footer-name-wp{text-align:center;}
+.footer-name-wp .footer-name{color:#A5A5A5;line-height:1;font-size:clamp(18px,9.3vw,185px);font-weight:800;white-space:nowrap;text-align:center;}
+
+
+
 @media (max-width: 1699.98px) { 
 .inquiry_title h3{font-size:26px;}
 .inquiry_main{padding:20px;}
@@ -299,6 +304,7 @@ ul.f-menu{padding-right:0px;padding-left:0px;}
   .footer-bottom-right{flex-direction:column-reverse;}
   .call-mail-info .call-mail-link{font-size:14px;}
 
+  .footer-name-wp .footer-name {font-size: clamp(18px, 9.5vw, 76px);}
 
 }
 
@@ -321,7 +327,7 @@ ul.f-menu{padding-right:0px;padding-left:0px;}
 .map_address_row .new-footer-map{width:100%;}
 .map_address_row .footer-address{width:100%;padding-top:0;margin:-50px 0px 0px;position: relative; z-index: 1;}
 
-.new-footer-menu {padding-bottom: 0px; justify-content: space-between; flex-wrap: wrap; justify-content: flex-start; display: flex; gap: 30px; }
+.new-footer-menu {padding-bottom: 0px; justify-content: space-between; flex-wrap: wrap;display: flex; gap: 30px; }
 .map_address_row .footer-address .address{max-width:200px;}
 .new-footer-main .f_contact ul li{margin:20px 0px;}
 ul.f-menu{padding-left:0px;padding-right:0px;}
@@ -347,7 +353,7 @@ ul.f-menu li a{font-size:14px;}
 .contact_us_sec {padding-top: 60px; }
 
 .footer-bottom-right ul {flex-direction: column; align-items: flex-start; }
-
+.footer-name-wp .footer-name {font-size: clamp(18px, 9.5vw, 58px); margin-top: 30px;}
 
 }
 
