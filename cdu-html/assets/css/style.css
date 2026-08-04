@@ -367,6 +367,11 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
     .industry-sl-main .industry-slide .indus-list-name{font-size:14px;}
     .industry-sl-main .industry-slide .industry-list{margin-bottom:18px;}
     .industry-sl-main .industry-slide .cs-content-wrap{gap:28px;}
+
+    /* methodology CSS */
+    .methodology-sl-main{margin:40px 0 0;}
+    .methodology-card .methodology-duration{padding:5px 10px;font-size:13px;}
+    .methodology-card .methodology-number{font-size:18px;}
 }
 @media (max-width:1199px){
     .sep-devider{margin:20px 0;}
@@ -439,14 +444,6 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
 
 /*@dev Css Start*/
 
-/* common css add */
-.sec_subtitle{color:#fff;font-size:16px;font-weight:500;display:inline-flex;text-align:center;align-items:center;gap:6px;margin:0 auto;line-height:1.2;}
-.sec_sub_icon{display:block;flex-shrink:0;height:19px;}
-.sec_title{color:#fff;font-size:42px;font-weight:700;}
-.p_font_color{color:#7F8081;}
-.sec_typo{color:#0B0C0E;font-size:clamp(1.5rem,2.5vw,2.5rem);}
-.sep-devider{border-color:#DDDDDD;margin:30px 0;opacity:1;}
-
 /* Your Long-term Digital Partner - Dev */
 .ltdp-cdu-sec{padding:100px 0;background-color:#fcfcfc;}
 .ltdp-cdu-sec-video{max-width:1000px;margin:0 auto;}
@@ -507,7 +504,7 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
     .swae-cdu-sec{padding:100px 0;}
     .swae-wrap{margin:0 0 30px 0;}
     .swae-v-img{position:relative;}
-    .swae-video-text{position:absolute;left:25px;right: 25px; bottom:25px;}
+    .swae-video-text{position:absolute;left:25px;right:25px;bottom:25px;}
     .swae-video-text .swae-video-local span{background-color:#000;padding:10px;color:#fff;font-size:clamp(16px,2vw,40px);font-weight:500;display:inline-block;text-transform:uppercase;border-radius:5px;}
     .swae-video-expert span{background-color:#FFCD3A;font-weight:500;display:inline-block;padding:10px;font-size:clamp(16px,2vw,36px);text-transform:uppercase;border-radius:5px;}
     .swae-v-img .play-link{position:absolute;left:0px;right:0px;bottom:0px;top:0px;margin:auto;display:block;width:120px;height:120px;z-index:2;}
