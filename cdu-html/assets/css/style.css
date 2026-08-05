@@ -322,19 +322,19 @@ text-align:center;display:flex;align-items:center;justify-content:center;gap:24p
 /* Active Slide */
 .methodology-rtl .slick-current .borderline_fill{width:100%;}
 .methodology-rtl .slick-current .methodology-number{opacity:1;}
-ul.slick-dots{display:flex;align-items:center;justify-content:center;gap:6px;padding-top:20px;}
+ul.slick-dots{display:flex;align-items:center;justify-content:center;gap:6px;padding-top:16px;}
 ul.slick-dots button{font-size:0;width:12px;border-radius:2px;border:none;background-color:#dddd;height:4px;transition:width .3s ease,background-color .3s ease;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;-webkit-transition:width .3s ease,background-color .3s ease;-moz-transition:width .3s ease,background-color .3s ease;-ms-transition:width .3s ease,background-color .3s ease;-o-transition:width .3s ease,background-color .3s ease;}
 ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 
 /* our capabilities */
 .badge_tag{display:inline-flex;align-items:center;gap:10px;border:1px solid #DDDDDD;border-radius:50px;-webkit-border-radius:50px;-moz-border-radius:50px;-ms-border-radius:50px;-o-border-radius:50px;padding:5px 22px;overflow:hidden;font-size:14px;font-weight:400;width:max-content;color:#fff;margin-right:10px;}
 .badge_tag:last-child{margin-right:0;}
-.our-capabilities .capability-left-card{padding:50px 24px;position:relative;z-index:1;overflow:hidden;}
-.our-capabilities .capability-pattern{position:absolute;left:0;top:0;bottom:0;width:100%;pointer-events:none;z-index:-1;height:100%;}
-.our-capabilities .capability-pattern img{display:block;width:100%;height:100%;}
+.our-capabilities .capability-left-card{padding:50px 24px;position:relative;z-index:1;overflow:hidden;border-radius:30px;-webkit-border-radius:30px;-moz-border-radius:30px;-ms-border-radius:30px;-o-border-radius:30px;}
+.our-capabilities .capability-left-card::before{content:"";position:absolute;inset:0;background-image:url(../images/cdu-assets/capabilities-bg-img.png);background-repeat:no-repeat;background-size:cover;background-position:center;transform-origin:center;z-index:-1;background-color:#000000;}
 .our-capabilities .capability-content{padding:50px 0;}
-.our-capabilities .capability-content .sec_typo{margin-bottom:24px;font-size:clamp(36px,4vw,60px);font-weight:400;line-height:1.1;}
+.our-capabilities .capability-content .sec_typo{margin-bottom:24px;font-size:clamp(36px,3.5vw,60px);font-weight:400;line-height:1.1;}
 .our-capabilities .capability-right-card{padding:30px;background-color:#fff;border-radius:30px;border:1px solid #DDDDDD;box-shadow:0px 18px 48px -12px rgba(0,0,0,7.06%),0px 6px 18px -8px rgba(0,0,0,5.1%);display:flex;flex-direction:column;}
+.our-capabilities .capability-right-top h3{font-size:clamp(24px,2vw,32px);}
 .our-capabilities .capability-right-top p{font-size:13px;line-height:1.4;}
 .our-capabilities .capability-right-top{display:flex;align-items:center;gap:30px;justify-content:space-between;flex-wrap:wrap;padding-bottom:24px;}
 .capability-badge{display:inline-flex;width:max-content;padding:5px 12px;border:1px solid #FCBC14;color:#FCBC14;font-size:12px;font-weight:600;border-radius:50px;align-items:center;gap:8px;}
@@ -384,6 +384,16 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
     .methodology-card .methodology-duration img{width:13px;}
     .methodology-card .methodology-duration{margin:12px 0;padding:6px 12px;font-size:14px;}
     .methodology-card .methodology-icon{width:42px;height:42px;}
+
+    /* our capabilities */
+    .our-capabilities .capability-right-card{padding:25px;border-radius:25px;-webkit-border-radius:25px;-moz-border-radius:25px;-ms-border-radius:25px;-o-border-radius:25px;}
+    .capability-label{font-size:11px;padding-bottom:8px;}
+    .tech-stack span{font-size:11px;}
+    .tech-stack{gap:8px;}
+    .our-capabilities .capability-footer{padding-top:80px;}
+    .our-capabilities .capability-content .sec_typo{margin-bottom:16px;}
+    .badge_tag{gap:8px;padding:6px 16px;font-size:12px;margin-right:6px;}
+    .badge_tag img,.badge_tag svg{width:12px;}
 }
 @media (max-width:1499px){
     .main-case-slider .cs-slide-disc{font-size:16px;margin-bottom:22px;}
@@ -410,6 +420,21 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
     .methodology-card .methodology-number{font-size:16px;}
     .methodology-card .methodology-list li{font-size:15px;padding:5px 2px;}
     .methodology-card .methodology-icon{width:38px;height:38px;padding:11px;}
+
+    /* capability CSS */
+    .capability-badge{padding:5px 9px;font-size:11px;gap:6px;}
+    .capability-badge img,.capability-badge svg{width:14px;}
+    .our-capabilities .capability-right-card{padding:20px;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;-ms-border-radius:20px;-o-border-radius:20px;}
+    .our-capabilities .capability-left-card{border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;-ms-border-radius:20px;-o-border-radius:20px;}
+    .capability-label{font-size:10px;padding-bottom:6px;}
+    .tech-stack span{font-size:10px;padding:5px 10px;}
+    .our-capabilities .capability-content p{font-size:14px;}
+    .our-capabilities .capability-content{padding:40px 0;}
+    .our-capabilities .capability-left-card{padding:50px 20px;}
+    .badge_tag{gap:6px;padding:6px 12px;font-size:11px;margin-right:4px;}
+    .badge_tag img,.badge_tag svg{width:11px;}
+    .our-capabilities .capability-footer{padding-top:60px;}
+    .our-capabilities .capability-right-top{padding-bottom:14px;}
 }
 @media (max-width:1199px){
     .sep-devider{margin:20px 0;}
@@ -456,8 +481,13 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
     .industry-sl-main .main-slick-slider button.slick-next.slick-arrow{right:0;}
 
     /* methodology CSS */
-    .methodology-slide .methodology-card .method-wrap{padding:0 40px 0 0px;}
+    .methodology-slide .methodology-card .method-wrap{padding:0 30px 0 0;min-width:100%;}
     .methodology-card .methodology-list li{font-size:14px;}
+
+    /* our capabilities */
+    .our-capabilities{padding-top:20px;}
+    .our-capabilities .capability-right-top{gap:14px 30px;}
+    .our-capabilities .capability-footer{padding-top:40px;flex-direction:column;align-items:start;gap:10px;}
 }
 @media (max-width:768px){
     .main-case-slider .cs-slide-disc,.case-studies .case-disc{line-height:1.5;}
@@ -489,10 +519,18 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
     .slider-nav-wrapper{margin:0 16px;}
     .industry-sl-main .main-slick-slider .slick-arrow{margin-top:0px;}
     .slider-nav-wrapper .slick-slide{padding:12px 12px;}
-    .methodology-slide .methodology-card .method-wrap{padding:0 30px 0 0px;min-width:100%;}
+    .methodology-slide .methodology-card .method-wrap{padding:0;min-width:auto;}
+    .methodology-card .methodology-title h3{white-space:normal;font-size:20px;}
+    .methodology-rtl .borderline{display:none;}
+    .methodology-slide .methodology-card{height:100%;padding:16px 12px;border:1px solid #DDDDDD;box-shadow:0 2px 8px 0px rgba(0,0,0,0.15);border-radius:14px;-webkit-border-radius:14px;-moz-border-radius:14px;-ms-border-radius:14px;-o-border-radius:14px;}
+    .methodology-rtl .slick-slide{padding:12px 6px;}
     .methodology-card .methodology-icon{width:35px;height:35px;padding:9px;}
-    .methodology-card .methodology-list{padding-left:18px;}
+    .methodology-card .methodology-list{padding-left:22px;}
     .our-methodology .btn-wp{margin-top:16px;}
+    .our-capabilities .capability-left-card{padding:30px 16px;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px;-o-border-radius:16px;}
+    .our-capabilities .capability-right-card{padding:20px 16px;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px;-o-border-radius:16px;}
+    .tech-stack{gap:6px;}
+    .our-capabilities .capability-footer{padding-top:30px;}
 }
 
 /*@dev Css Start*/
