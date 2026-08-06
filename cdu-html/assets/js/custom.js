@@ -1,163 +1,4 @@
-
-// ==================================================================
-//                    Concept-animation JS Start
-// ================================================================== 
-
-
-gsap.registerPlugin(ScrollTrigger);
-    window.addEventListener("load", () => {
-
-        const section = document.querySelector(".concept-animation-main");
-        const cardsWrap = document.querySelector(".ani-card-wrap");
-        const cards = gsap.utils.toArray(".card_col");
-        const lastCard = cards[cards.length - 1];
-        const headingLeft = document.querySelector(".ani-middle-heading .left");
-        const headingRight = document.querySelector(".ani-middle-heading .right");
-        const buildBlock = document.querySelector(".cs-build-something");
-        if (!section || !cardsWrap || !lastCard) return;
-
-        if (window.innerWidth >= 1200) {
-            const endTarget = buildBlock || lastCard;
-
-            function getMoveDistance() {
-                const rect = endTarget.getBoundingClientRect();
-
-                if (window.innerWidth > 1536) {
-                    // > 1536px
-                    bottomGap = 960;
-                } else {
-                    // 1200px - 1536px
-                    bottomGap = 820; // Change this value as needed
-                }
-
-                return endTarget.offsetTop + rect.height - (window.innerHeight - bottomGap);
-            }
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: () => "+=" + getMoveDistance(),
-                    pin: true,
-                    scrub: 1.2,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    markers: false
-                }
-            });
-
-            if (headingLeft && headingRight) {
-                let headingDuration;
-
-                if (window.innerWidth > 1800) {
-                    headingDuration = 0.15;
-                }
-                else if (window.innerWidth > 1500) {
-                    headingDuration = 0.10;
-                }
-                else if (window.innerWidth >= 1200) {
-                    headingDuration = 0.10;
-                }
-
-                tl.to(headingLeft, {
-                    xPercent: -100,
-                    ease: "none",
-                    duration: headingDuration
-                }, 0)
-                .to(headingRight, {
-                    xPercent: 100,
-                    ease: "none",
-                    duration: headingDuration
-                }, 0);
-            }
-
-            tl.to(cardsWrap, {
-                y: () => -getMoveDistance(),
-                ease: "none",
-                duration: 1
-            }, 0);
-        }
-
-        else if(window.innerWidth >= 769) {
-            let endValue;
-
-            if (window.innerWidth >= 992) {
-                endValue = 2400;
-            } else {
-                endValue = 2200;
-            }
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "+=" + endValue,
-                    pin: true,
-                    scrub: 1.2,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    markers: false
-                }
-            });
-
-            tl.to(cardsWrap, {
-                y: () => -endValue,
-                ease: "none",
-                duration: 1
-            }, 0);
-            ScrollTrigger.refresh(true);
-        }
-        
-        else if(window.innerWidth >= 300){
-
-            // const moveDistance = cardsWrap.scrollHeight - window.innerHeight;
-            let endValue;
-
-            if (window.innerWidth >= 575) {
-                endValue = 1800;
-            } 
-            else if (window.innerWidth >= 400) {
-                endValue = 1650;
-            } 
-            else {
-                endValue = 1700;
-            }
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "+=" + endValue,
-                    pin: true,
-                    scrub: 1.2,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    markers: false
-                }
-            });
-
-            tl.to(cardsWrap, {
-                y: () => -endValue,
-                ease: "none",
-                duration: 1
-            }, 0);
-            ScrollTrigger.refresh(true);
-
-        }
-
-        ScrollTrigger.refresh();
-    });
-
-// ==================================================================
-//                    Concept-animation JS END
-// ================================================================== 
-
-
-
-
-
 $(document).ready(function() {
-
-                       
 
     // ==================================================================
     //                    Header JS Start
@@ -204,14 +45,13 @@ $(document).ready(function() {
         }, "100");
     });
 
-    
+
     $('.clients-logo-inner').slick({
         dots: false,
         arrows: false,
         autoplay: true,
         variableWidth: true,
         autoplaySpeed: 0,
-        // slidesToShow: 5,
         speed: 5000,
         cssEase: "linear",
         pauseOnHover: false,
@@ -237,8 +77,6 @@ $(document).ready(function() {
     });
 
 
-
-
     $('.blogs-rtl').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -246,13 +84,10 @@ $(document).ready(function() {
         swipe: true,
         touchMove: true,
         edgeFriction: 0,
-
         swipeToSlide: false,
         touchThreshold: 20,
-
         infinite: false,
         autoplay: false,
-
         variableWidth: false,
         arrows: false,
         dots: false,
@@ -260,7 +95,7 @@ $(document).ready(function() {
         responsive: [{
             breakpoint: 575,
             settings: {
-                slidesToShow: 1.,
+                slidesToShow: 1,
                 dots: true,
             }
         }, {
@@ -274,7 +109,7 @@ $(document).ready(function() {
 
 
     //  Slick Slider Case Studies Start
-     
+
     let $wrap = $('.case-studies');
     let $slider = $wrap.find('.main-case-slider');
     let $cur = $wrap.find('.cs-cur');
@@ -291,7 +126,6 @@ $(document).ready(function() {
         fade: true,
         cssEase: 'ease-in-out',
         infinite: true,
-        // autoplaySpeed: 5000,
         autoplay: false,
         prevArrow: $('.pagination-prev'),
         nextArrow: $('.pagination-next'),
@@ -313,12 +147,10 @@ $(document).ready(function() {
     $slider.on('afterChange', function(event, slick, currentSlide) {
         $cur.text(String(currentSlide + 1).padStart(2, '0'));
     });
-     
 
-     //  Slick Slider Case Studies End
+    //  Slick Slider Case Studies End
 
     // Client-testimonials JS Start
-
 
     (function() {
         let $wrap = $('.client-testimonials');
@@ -347,9 +179,9 @@ $(document).ready(function() {
             variableWidth: false
         });
     })();
-   // Client-testimonials JS End
+    // Client-testimonials JS End
 
-    // Slick Slider Industry Served 
+    // Slick Slider Industry Served
 
     $('.slider-nav-wrapper').slick({
         slidesToShow: 7,
@@ -387,13 +219,12 @@ $(document).ready(function() {
         adaptiveHeight: true,
         arrows: false,
         asNavFor: '.slider-nav-wrapper',
-
     });
-     
+
 
     // Slick Slider Methodology
-    
-    $('.methodology-rtl').on('init afterChange', function (event, slick, currentSlide) {
+
+    $('.methodology-rtl').on('init afterChange', function(event, slick, currentSlide) {
         let current = currentSlide || 0;
 
         $('.methodology-slide').removeClass('is-active');
@@ -401,14 +232,11 @@ $(document).ready(function() {
     });
 
     $('.methodology-rtl').slick({
-        // slidesToShow: 3.5,
         slidesPerView: 'auto',
         slidesToScroll: 1,
         edgeFriction: 0,
-
         swipeToSlide: false,
         touchThreshold: 20,
-
         infinite: false,
         variableWidth: true,
         arrows: false,
@@ -426,7 +254,6 @@ $(document).ready(function() {
                 settings: {
                     slidesToShow: 1,
                     variableWidth: false,
-                    slidesToShow: 1,
                     dots: true,
                 }
             },
@@ -442,10 +269,158 @@ $(document).ready(function() {
     });
 
 
+    if (window.ScrollTrigger) {
+        ScrollTrigger.refresh();
+    }
 
 });
 
 
+// // ==================================================================
+// //                    Concept-animation JS Start
+// // ================================================================== 
 
 
 
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener("load", () => {
+
+    const section = document.querySelector(".concept-animation-main");
+    const cardsWrap = document.querySelector(".ani-card-wrap");
+    const cards = gsap.utils.toArray(".card_col");
+    const lastCard = cards[cards.length - 1];
+    const headingLeft = document.querySelector(".ani-middle-heading .left");
+    const headingRight = document.querySelector(".ani-middle-heading .right");
+    const buildBlock = document.querySelector(".cs-build-something");
+    if (!section || !cardsWrap || !lastCard) return;
+
+    if (window.innerWidth >= 1200) {
+        const endTarget = buildBlock || lastCard;
+
+        function getMoveDistance() {
+            const rect = endTarget.getBoundingClientRect();
+
+            let bottomGap;
+
+            if (window.innerWidth > 1536) {
+                // > 1536px
+                bottomGap = 960;
+            } else {
+                // 1200px - 1536px
+                bottomGap = 820; // Change this value as needed
+            }
+
+            return endTarget.offsetTop + rect.height - (window.innerHeight - bottomGap);
+        }
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: () => "+=" + getMoveDistance(),
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                markers: false
+            }
+        });
+
+        if (headingLeft && headingRight) {
+            let headingDuration;
+
+            if (window.innerWidth > 1800) {
+                headingDuration = 0.15;
+            } else if (window.innerWidth > 1500) {
+                headingDuration = 0.10;
+            } else if (window.innerWidth >= 1200) {
+                headingDuration = 0.10;
+            }
+
+            tl.to(headingLeft, {
+                    xPercent: -100,
+                    ease: "none",
+                    duration: headingDuration
+                }, 0)
+                .to(headingRight, {
+                    xPercent: 100,
+                    ease: "none",
+                    duration: headingDuration
+                }, 0);
+        }
+
+        tl.to(cardsWrap, {
+            y: () => -getMoveDistance(),
+            ease: "none",
+            duration: 1
+        }, 0);
+    } else if (window.innerWidth >= 769) {
+        let endValue;
+
+        if (window.innerWidth >= 992) {
+            endValue = 2400;
+        } else {
+            endValue = 2200;
+        }
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: "+=" + endValue,
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                markers: false
+            }
+        });
+
+        tl.to(cardsWrap, {
+            y: () => -endValue,
+            ease: "none",
+            duration: 1
+        }, 0);
+    } else if (window.innerWidth >= 300) {
+        let endValue;
+
+        if (window.innerWidth >= 575) {
+            endValue = 1800;
+        } else if (window.innerWidth >= 400) {
+            endValue = 1650;
+        } else {
+            endValue = 1700;
+        }
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: "+=" + endValue,
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                markers: false
+            }
+        });
+
+        tl.to(cardsWrap, {
+            y: () => -endValue,
+            ease: "none",
+            duration: 1
+        }, 0);
+    }
+
+
+    setTimeout(() => {
+        ScrollTrigger.refresh();
+    }, 300);
+
+});
+
+
+window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+});
