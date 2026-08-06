@@ -1,12 +1,12 @@
 
 
-.contact_us_sec{background-color: #000; padding-top: 100px; border-top-left-radius: 40px; border-top-right-radius:40px;border-bottom: 8px solid #FCBC14;}
+.contact_us_sec{background-color: #000; padding-top: 100px;padding-bottom: 60px; border-top-left-radius: clamp(20px, 2.5vw, 40px); border-top-right-radius:clamp(20px, 2.5vw, 40px);border-bottom: 8px solid #FCBC14;}
 .sm-details-top{display:flex;}
 .sm-details-top svg{width:36px;}
 .sm-details-top p{width:calc(100% - 36px);padding-left:30px;font-size:24px;line-height:39px;max-width:550px;}
 .sales-manager-details{max-width:600px;display: flex; flex-direction: column; justify-content: space-between;height: 100%;}
-.contact_us_form-title h2 {/*font-size: 68px; line-height: 86px;*/ margin-bottom: 58px; }
-.contact_us_sec .form-group-main {padding-bottom: 50px; }
+.contact_us_form-title h2 {/*font-size: 68px; line-height: 86px;*/ margin-bottom: 40px;     font-size: clamp(1.5rem, 2.5vw, 2.5rem);}
+.contact_us_form_main {background: #fff; padding: 40px 30px; border-radius: clamp(15px, 2.5vw, 24px); }
 .sm-details-bottom{display:flex;justify-content:space-between;}
 .sm-details-bottom .sm-details-info{align-self:end;padding-bottom:80px;width:50%;}
 .sm-details-info span.sm-name{display:inline-block;width:100%;font-size: 24px; font-weight: 600; text-transform: uppercase;}
@@ -14,19 +14,19 @@
 .sm-details-bottom .sm-details-img img{max-width:100%;}
 .sm-position {font-size: 18px; font-weight: bold; text-transform: uppercase;; font-weight: 500; }
 
-.contact_us_form .form-group .form-control {background: #272727; border: none; padding: 15px 30px; height: 65px; color: #fff; border-radius: 20px; }
+.contact_us_form .form-group .form-control {background: rgba(39, 39, 39, 0.1); border: none; padding: 15px 30px; height: 65px; color: rgba(11, 12, 14, 1); border-radius: 20px; }
 .contact_us_form .form-group textarea.form-control{height:140px;}
 .contact_us_form .form-group{margin-bottom:20px;}
 
 
-.contact_us_form .form-control::placeholder{color:#B9B9B9;font-weight:normal;font-size:16px;}
-.contact_us_form .form-control::-moz-placeholder{color:#B9B9B9;font-weight:normal;font-size:16px;}
-.contact_us_form .form-control:-ms-input-placeholder{color:#B9B9B9;font-weight:normal;font-size:16px;}
-.contact_us_form .form-control::-webkit-input-placeholder{color:#B9B9B9;font-weight:normal;font-size:16px;}
-.contact_us_form .form-control::-o-input-placeholder{color:#B9B9B9;font-weight:normal;font-size:16px;}
+.contact_us_form .form-control::placeholder{color:rgba(11, 12, 14, 0.6);font-weight:normal;font-size:16px;}
+.contact_us_form .form-control::-moz-placeholder{color:rgba(11, 12, 14, 0.6);font-weight:normal;font-size:16px;}
+.contact_us_form .form-control:-ms-input-placeholder{color:rgba(11, 12, 14, 0.6);font-weight:normal;font-size:16px;}
+.contact_us_form .form-control::-webkit-input-placeholder{color:rgba(11, 12, 14, 0.6);font-weight:normal;font-size:16px;}
+.contact_us_form .form-control::-o-input-placeholder{color:rgba(11, 12, 14, 0.6);font-weight:normal;font-size:16px;}
 
-
-
+.footer-speak-team.banner-speak-team {background: rgba(255, 255, 255, 0.3); }
+.footer-speak-team.banner-speak-team p {color: rgba(255,255,255,0.5); }
 
 .f-menu-title{color:#676767;font-size:18px;line-height:28px;padding:2px 0;position:relative;text-transform:uppercase;font-weight:600;margin-bottom:10px;display:inline-block;}
 .new-footer-menu.footer-menu-bottom {padding-bottom: 0px; padding-top: 50px; border-top: 1px solid #1A1A1A; margin-top: 35px; }
@@ -115,7 +115,14 @@ ul.f-menu li{margin:10px 0px;}
 
 .footer-name-wp{text-align:center;}
 .footer-name-wp .footer-name{color:#A5A5A5;line-height:1;font-size:clamp(18px,9.3vw,185px);font-weight:800;white-space:nowrap;text-align:center;}
-
+.f-icontext-main{display:flex;margin-top:20px;margin-bottom:50px; flex-wrap: wrap;}
+.f-icontext-main .f-icontext{margin-right:12px;margin-bottom:15px;background:rgba(255,255,255,0.3);padding:12px 10px;border-radius:15px;border:1px solid #dddddd;line-height:1;font-size: 13px;}
+.f-icontext-main .f-icontext svg{margin-right:10px;}
+.contact_us_text_row .contact_us_text_col{padding:16px 0px;border-bottom:1px solid rgba(221,221,221,0.2);}
+.contact_us_text_row .contact_us_text_col p{margin-bottom:0px;}
+.contact_us_text_row .contact_us_text_col:last-child{border-bottom:none;}
+.contact_mail_main{margin:40px 0px;}
+.contact_mail_main .contact_mail{width:100%;text-align:center;color:#000;background:#ffff;padding:15px;border-radius:35px;font-size:clamp(14px,1.5vw,1.4rem);font-weight:500;}
 
 
 @media (max-width: 1699.98px) { 
@@ -174,6 +181,12 @@ ul.f-menu li{margin:8px 0px;}
 .form-send-btn .btn{padding:19px 55px 19px 20px;font-size:16px;}
 .form-send-btn .btn::after{right:7px;}
 
+
+.contact_us_form .form-group .form-control{height:55px;border-radius:15px;padding:14px 20px;font-size:16px;}
+.form-send-btn .btn{min-height:55px;}
+
+
+
 }
 
 
@@ -215,6 +228,8 @@ ul.f-menu li{margin:7px 0px;}
   .sm-position{font-size:14px;}
   .form-bottom-text{font-size:14px;}
   .contact_us_form .form-group .form-control{padding:12px 20px;height:60px;border-radius:13px;}
+
+
 
 }
 
@@ -268,6 +283,9 @@ ul.f-menu li a{font-size:12px;line-height:18px;}
 .form-send-btn .btn {font-size: 13px; padding: 17px 45px 17px 15px; border-radius: 12px; }
 
 .copy-right-text {text-align: center; margin-top: 20px; }
+
+.f-icontext-main {margin-bottom: 30px; }
+
 
 }
 

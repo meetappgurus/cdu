@@ -108,6 +108,8 @@ h1 { font-size:50px;}
 	.form-send-btn .btn .wpcf7-spinner {transform: scale(1.3); right: 9px; }
 	.form-send-btn .btn {min-height: 50px; }
 
+
+	.faqs-section .accordion-header .accordion-button {font-size: 18px; }
 	
 
 }		
@@ -215,6 +217,13 @@ h1 { font-size:50px;}
 	h1.banner-heading {font-size: clamp(26px, 4vw, 30px); }
 
 
+	.faqs-section .accordion-header .accordion-button{font-size:16px;padding:15px 35px 15px 0px;}
+	.faqs-section .accordion-body{padding:0px 30px 10px 0px;}
+	.faqs-section .accordion-body p{font-size:14px;line-height:1.6;}
+
+
+
+
 }
 
 /*=========================================================
@@ -226,8 +235,11 @@ Extra small devices (portrait phones, less than 576px)
 
 	.font20{font-size:16px!important;}
 	.font18{font-size:15px!important;}
-	
 
+	.ort-loc-wp .ort-loc-text h5{font-size:clamp(2.2rem,4.5vw,3.5rem);}
+	.ort-loc-wp{flex-direction:column;}
+	.ort-loc-wp .ort-loc-text,.ort-loc-wp .ort-loc-info{width:100%;}
+	.ort-loc-wp .ort-loc-info{padding-left:0px;margin-top:20px;}
 
 }
 

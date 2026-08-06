@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
-  <g id="mail-icon" transform="translate(-1179 -875)">
-    <path id="Path_2483" data-name="Path 2483" d="M18,0A18,18,0,1,0,36,18,18.017,18.017,0,0,0,18,0Z" transform="translate(1179 875)" fill-rule="evenodd"/>
-    <g id="envelope" transform="translate(1188 884.262)">
-      <path id="Path_2713" data-name="Path 2713" d="M16.851,5.542l-5.922,5.922a3.522,3.522,0,0,1-4.975,0L.032,5.542C.023,5.653,0,5.754,0,5.864v8.442a3.522,3.522,0,0,0,3.517,3.517h9.849a3.522,3.522,0,0,0,3.517-3.517V5.864C16.883,5.754,16.861,5.653,16.851,5.542Z" transform="translate(0 -1.347)" fill="#fcbc14"/>
-      <path id="Path_2714" data-name="Path 2714" d="M10.155,9.122,16.581,2.7A3.508,3.508,0,0,0,13.587,1H3.738A3.508,3.508,0,0,0,.744,2.7L7.17,9.122a2.115,2.115,0,0,0,2.986,0Z" transform="translate(-0.221)" fill="#fcbc14"/>
-    </g>
-  </g>
-</svg>
