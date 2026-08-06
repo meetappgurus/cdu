@@ -294,141 +294,148 @@ $(document).ready(function() {
 //                    Concept-animation JS Start
 // ================================================================== 
 
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
 
-    gsap.registerPlugin(ScrollTrigger);
-    window.addEventListener("load", () => {
+    const section = document.querySelector(".concept-animation-main");
+    const cardsWrap = document.querySelector(".ani-card-wrap");
+    const cards = gsap.utils.toArray(".card_col");
+    const lastCard = cards[cards.length - 1];
+    const headingLeft = document.querySelector(".ani-middle-heading .left");
+    const headingRight = document.querySelector(".ani-middle-heading .right");
+    const buildBlock = document.querySelector(".cs-build-something");
+    if (!section || !cardsWrap || !lastCard) return;
 
-        const section = document.querySelector(".concept-animation-main");
-        const cardsWrap = document.querySelector(".ani-card-wrap");
-        const cards = gsap.utils.toArray(".card_col");
-        const lastCard = cards[cards.length - 1];
-        const headingLeft = document.querySelector(".ani-middle-heading .left");
-        const headingRight = document.querySelector(".ani-middle-heading .right");
-        const buildBlock = document.querySelector(".cs-build-something");
-        if (!section || !cardsWrap || !lastCard) return;
+    if (window.innerWidth >= 1200) {
+        const endTarget = buildBlock || lastCard;
 
-        if (window.innerWidth >= 1200) {
-            const endTarget = buildBlock || lastCard;
+        function getMoveDistance() {
+            const rect = endTarget.getBoundingClientRect();
 
-            function getMoveDistance() {
-                const rect = endTarget.getBoundingClientRect();
-
-                if (window.innerWidth > 1536) {
-                    // > 1536px
-                    bottomGap = 960;
-                } else {
-                    // 1200px - 1536px
-                    bottomGap = 820; // Change this value as needed
-                }
-
-                return endTarget.offsetTop + rect.height - (window.innerHeight - bottomGap);
-            }
-
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: () => "+=" + getMoveDistance(),
-                    pin: true,
-                    scrub: 1.2,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    markers: false
-                }
-            });
-
-            if (headingLeft && headingRight) {
-                let headingDuration;
-
-                if (window.innerWidth > 1800) {
-                    headingDuration = 0.15;
-                } else if (window.innerWidth > 1500) {
-                    headingDuration = 0.10;
-                } else if (window.innerWidth >= 1200) {
-                    headingDuration = 0.10;
-                }
-
-                tl.to(headingLeft, {
-                        xPercent: -100,
-                        ease: "none",
-                        duration: headingDuration
-                    }, 0)
-                    .to(headingRight, {
-                        xPercent: 100,
-                        ease: "none",
-                        duration: headingDuration
-                    }, 0);
-            }
-
-            tl.to(cardsWrap, {
-                y: () => -getMoveDistance(),
-                ease: "none",
-                duration: 1
-            }, 0);
-        } else if (window.innerWidth >= 769) {
-            let endValue;
-
-            if (window.innerWidth >= 992) {
-                endValue = 2400;
+            if (window.innerWidth > 1536) {
+                // > 1536px
+                bottomGap = 960;
             } else {
-                endValue = 2200;
+                // 1200px - 1536px
+                bottomGap = 820; // Change this value as needed
             }
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "+=" + endValue,
-                    pin: true,
-                    scrub: 1.2,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    markers: false
-                }
-            });
-
-            tl.to(cardsWrap, {
-                y: () => -endValue,
-                ease: "none",
-                duration: 1
-            }, 0);
-            ScrollTrigger.refresh(true);
-        } else if (window.innerWidth >= 300) {
-
-            // const moveDistance = cardsWrap.scrollHeight - window.innerHeight;
-            let endValue;
-
-            if (window.innerWidth >= 575) {
-                endValue = 1800;
-            } else if (window.innerWidth >= 400) {
-                endValue = 1650;
-            } else {
-                endValue = 1700;
-            }
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top top",
-                    end: "+=" + endValue,
-                    pin: true,
-                    scrub: 1.2,
-                    anticipatePin: 1,
-                    invalidateOnRefresh: true,
-                    markers: false
-                }
-            });
-
-            tl.to(cardsWrap, {
-                y: () => -endValue,
-                ease: "none",
-                duration: 1
-            }, 0);
-            ScrollTrigger.refresh(true);
-
+            return endTarget.offsetTop + rect.height - (window.innerHeight - bottomGap);
         }
 
-        ScrollTrigger.refresh();
-    });
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: () => "+=" + getMoveDistance(),
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                markers: false
+            }
+        });
+
+        if (headingLeft && headingRight) {
+            let headingDuration;
+
+            if (window.innerWidth > 1800) {
+                headingDuration = 0.15;
+            }
+            else if (window.innerWidth > 1500) {
+                headingDuration = 0.10;
+            }
+            else if (window.innerWidth >= 1200) {
+                headingDuration = 0.10;
+            }
+
+            tl.to(headingLeft, {
+                xPercent: -100,
+                ease: "none",
+                duration: headingDuration
+            }, 0)
+            .to(headingRight, {
+                xPercent: 100,
+                ease: "none",
+                duration: headingDuration
+            }, 0);
+        }
+
+        tl.to(cardsWrap, {
+            y: () => -getMoveDistance(),
+            ease: "none",
+            duration: 1
+        }, 0);
+    }
+
+    else if(window.innerWidth >= 769) {
+        let endValue;
+
+        if (window.innerWidth >= 992) {
+            endValue = 2400;
+        } else {
+            endValue = 2200;
+        }
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: "+=" + endValue,
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                markers: false
+            }
+        });
+
+        tl.to(cardsWrap, {
+            y: () => -endValue,
+            ease: "none",
+            duration: 1
+        }, 0);
+        ScrollTrigger.refresh(true);
+    }
+    
+    else if(window.innerWidth >= 300){
+
+        // const moveDistance = cardsWrap.scrollHeight - window.innerHeight;
+        let endValue;
+
+        if (window.innerWidth >= 575) {
+            endValue = 1800;
+        } 
+        else if (window.innerWidth >= 400) {
+            endValue = 1650;
+        } 
+        else {
+            endValue = 1700;
+        }
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: "+=" + endValue,
+                pin: true,
+                scrub: 1.2,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+                markers: false
+            }
+        });
+
+        tl.to(cardsWrap, {
+            y: () => -endValue,
+            ease: "none",
+            duration: 1
+        }, 0);
+        ScrollTrigger.refresh(true);
+
+    }
+
+    ScrollTrigger.refresh();
+});
 
 // ==================================================================
 //                    Concept-animation JS END
