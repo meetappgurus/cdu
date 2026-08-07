@@ -2653,6 +2653,10 @@ ul.slick-dots .slick-active button {
     display: inline-block;
 }
 
+.salesforce-sec .rts-cdu-main::after {
+    display: none;
+}
+
 .rts-cdu-specialists {
     display: flex;
     align-items: center;
