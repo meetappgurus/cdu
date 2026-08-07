@@ -221,6 +221,110 @@ $(document).ready(function() {
         asNavFor: '.slider-nav-wrapper',
     });
 
+    // Services Tabs JS Start
+
+    $('.service-tab').on('click', function (e) {
+        e.preventDefault();
+
+        $('.service-tab').removeClass('active');
+        $(this).addClass('active');
+
+        const target = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 50 // adjust according to your sticky header height
+        }, 0);
+    });
+
+    // end
+
+    // Services slider For Responsive
+    function serviceSlider() {
+        if ($(window).width() < 1199) {
+            if (!$('.explore-services-list').hasClass('slick-initialized')) {
+
+                $('.explore-services-list').slick({
+                    slidesToShow: 2.2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    infinite: false,
+                    touchThreshold: 20,
+                    speed: 500,
+                    responsive: [
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                slidesToShow: 1.2
+                            }
+                        },
+                        {
+                            breakpoint: 360,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+            }
+
+        } else {
+            if ($('.explore-services-list').hasClass('slick-initialized')) {
+                $('.explore-services-list').slick('unslick');
+            }
+        }
+    }
+
+    serviceSlider();
+    $(window).on('resize', serviceSlider);
+
+    // Microsoft Azure Slider For Responsive
+    function microsoftAzureSlider() {
+
+        const $slider = $('.microsoft-azure-sec .explore-services-list');
+        if ($(window).width() < 1199) {
+            if (!$slider.hasClass('slick-initialized')) {
+                $slider.slick({
+                    slidesToShow: 2.2,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                    infinite: false,
+                    touchThreshold: 20,
+                    speed: 500,
+                    responsive: [
+                        {
+                            breakpoint: 575,
+                            settings: {
+                                slidesToShow: 1.2
+                            }
+                        },
+                        {
+                            breakpoint: 360,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+                });
+
+            }
+
+        } else {
+
+            if ($slider.hasClass('slick-initialized')) {
+                $slider.slick('unslick');
+            }
+
+        }
+
+    }
+
+    microsoftAzureSlider();
+    $(window).on('resize', microsoftAzureSlider);
+
+
+
 
     // Slick Slider Methodology
 
@@ -267,7 +371,6 @@ $(document).ready(function() {
             }
         ]
     });
-
 
     if (window.ScrollTrigger) {
         ScrollTrigger.refresh();
