@@ -2657,14 +2657,14 @@ ul.slick-dots .slick-active button {
     display: none;
 }
 
-.rts-cdu-specialists {
+.salesforce-sec .rts-cdu-specialists {
     display: flex;
     align-items: center;
     gap: 50px;
     justify-content: end;
 }
 
-.avatar-wrap {
+.salesforce-sec .avatar-wrap {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -2673,14 +2673,14 @@ ul.slick-dots .slick-active button {
     border: 1px solid #DDDDDD;
 }
 
-.specialist-name {
+.salesforce-sec .specialist-name {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 2px;
 }
 
-.specialist-role {
+.salesforce-sec .specialist-role {
     color: #7F8081;
     font-size: 14px;
     line-height: 1.4;
@@ -3017,6 +3017,20 @@ ul.slick-dots .slick-active button {
     .exp-top-wrap .outline-btn svg {
         width: 18px;
     }
+
+    .salesforce-sec .stats .stats-box {
+        padding: 25px 12px 0;
+        margin-top: 25px;
+    }
+
+    .salesforce-sec .avatar-wrap {
+        width: 110px;
+        height: 110px;
+    }
+
+    .salesforce-sec .rts-cdu-specialists {
+        gap: 34px;
+    }
 }
 
 @media (max-width:1499px) {
@@ -3278,6 +3292,15 @@ ul.slick-dots .slick-active button {
         padding-right: 12px;
         max-width: calc(100% - 132px);
     }
+
+    .salesforce-sec .avatar-wrap {
+        width: 90px;
+        height: 90px;
+    }
+
+    .salesforce-sec .specialist-role {
+        font-size: 12px;
+    }
 }
 
 @media (max-width:1199px) {
@@ -3497,6 +3520,19 @@ ul.slick-dots .slick-active button {
     .explore-services-list .slick-list {
         margin: 0 -6px;
     }
+
+    .salesforce-sec .rts-cdu-specialists {
+        gap: 25px;
+    }
+
+    .salesforce-sec .avatar-wrap {
+        width: 70px;
+        height: 70px;
+    }
+
+    .salesforce-sec .stats .stats-box {
+        padding: 20px 10px 0;
+    }
 }
 
 @media (max-width:991px) {
@@ -3705,6 +3741,16 @@ ul.slick-dots .slick-active button {
     .expl-services-card .outline-btn {
         text-align: start;
     }
+
+    .salesforce-sec .rts-cdu-specialists {
+        gap: 20px;
+        justify-content: start;
+        margin: 30px 0 0;
+    }
+
+    .salesforce-sec .stats .stats-box::after {
+        height: 40px;
+    }
 }
 
 @media (max-width:768px) {
@@ -3795,6 +3841,31 @@ ul.slick-dots .slick-active button {
 
     .industry-sl-main .industry-slide .case-image-wrap {
         height: auto;
+    }
+
+    .salesforce-sec .avatar-wrap {
+        width: 60px;
+        height: 60px;
+    }
+
+    .salesforce-sec .rts-cdu-specialists {
+        margin: 30px 0 20px;
+        border-bottom: 1px solid rgba(221, 221, 221, 0.4);
+        padding-bottom: 20px;
+    }
+
+    .salesforce-sec .stats .stats-box {
+        padding: 6px 10px;
+        margin: 0;
+        border: none;
+    }
+
+    .salesforce-sec .stats .stats-box:nth-child(2)::after {
+        display: none;
+    }
+
+    .salesforce-sec .stats {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -4123,6 +4194,18 @@ ul.slick-dots .slick-active button {
 
     .service-provide-sec .explore-service-wrap {
         margin-top: 30px;
+    }
+
+    .salesforce-sec .rts-cdu-specialists {
+        flex-direction: column;
+    }
+
+    .salesforce-sec .rts-btn-main {
+        justify-content: center;
+    }
+
+    .salesforce-sec .section_heading {
+        text-align: center;
     }
 }
 
@@ -4593,6 +4676,7 @@ ul.slick-dots .slick-active button {
     .swae-cdu-top .cta-main {
         margin-top: 30px;
     }
+
 }
 
 @media (max-width:767px) {
