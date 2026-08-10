@@ -372,10 +372,18 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 769,
+                breakpoint: 768,
                 settings: {
                     variableWidth: false,
                     slidesToShow: 1,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    variableWidth: false,
+                    slidesToShow: 2,
                     dots: true,
                 }
             }
