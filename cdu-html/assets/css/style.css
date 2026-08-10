@@ -2494,6 +2494,7 @@ ul.slick-dots .slick-active button {
 
 .explore-services-slide {
     max-width: 460px;
+    width: 100%;
 }
 
 .expl-services-card {
