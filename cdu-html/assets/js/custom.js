@@ -372,21 +372,21 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
                     variableWidth: false,
                     slidesToShow: 1,
                     dots: true,
                 }
             },
-            {
-                breakpoint: 992,
-                settings: {
-                    variableWidth: false,
-                    slidesToShow: 2,
-                    dots: true,
-                }
-            }
+            // {
+            //     breakpoint: 992,
+            //     settings: {
+            //         variableWidth: false,   
+            //         slidesToShow: 2,
+            //         dots: true,
+            //     }
+            // }
         ]
     });
 

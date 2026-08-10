@@ -3646,6 +3646,10 @@ ul.slick-dots .slick-active button {
         font-size: 14px;
     }
 
+    .methodology-rtl .slick-slide {
+        min-width: 400px;
+    }
+
     /* our capabilities */
     .our-capabilities {
         padding-top: 20px;
@@ -3755,6 +3759,10 @@ ul.slick-dots .slick-active button {
 }
 
 @media (max-width:768px) {
+    .methodology-rtl .slick-slide {
+        min-width: auto;
+    }
+
     .rts-cdu-sec.rts-cdu-sec-v1 .rts-cdu-main:after {
         display: none;
     }
