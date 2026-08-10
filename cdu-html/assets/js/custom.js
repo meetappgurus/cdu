@@ -225,14 +225,24 @@ $(document).ready(function() {
 
     $('.service-tab').on('click', function (e) {
         e.preventDefault();
+      
+        const $this = $(this);
+        const target = $this.attr('href');
+        const $target = $(target);
 
+        // Check target section exists
+        if (!$target.length) {
+            console.warn('Target section not found:', target);
+            return;
+        }
+
+        // Active class
         $('.service-tab').removeClass('active');
-        $(this).addClass('active');
+        $this.addClass('active');
 
-        const target = $(this).attr('href');
-
+        // Scroll to section
         $('html, body').animate({
-            scrollTop: $(target).offset().top - 50 // adjust according to your sticky header height
+            scrollTop: $target.offset().top - 50
         }, 0);
     });
 
