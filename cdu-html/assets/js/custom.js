@@ -221,6 +221,45 @@ $(document).ready(function() {
         asNavFor: '.slider-nav-wrapper',
     });
 
+
+    // Team person slider
+    $('.team-person-slider').slick({
+        dots: false,
+        arrows: true,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // speed: 2000,
+ 
+        responsive: [{
+            breakpoint: 1400,
+            settings: {
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 3,
+                infinite: true,
+                dots: false
+            }
+        }, {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
+    });
+
     // Services Tabs JS Start
 
     $('.service-tab').on('click', function (e) {
@@ -334,8 +373,6 @@ $(document).ready(function() {
     $(window).on('resize', microsoftAzureSlider);
 
 
-
-
     // Slick Slider Methodology
 
     $('.methodology-rtl').on('init afterChange', function(event, slick, currentSlide) {
@@ -397,11 +434,9 @@ $(document).ready(function() {
 });
 
 
-// // ==================================================================
-// //                    Concept-animation JS Start
-// // ================================================================== 
-
-
+// ==================================================================
+//                    Concept-animation JS Start
+// ================================================================== 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -545,3 +580,146 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
     ScrollTrigger.refresh();
 });
+
+// end
+
+
+
+// ==================================================================
+//                  How We Deliver Sticky Animation
+// ==================================================================
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+if (window.matchMedia("(min-width: 1200px)").matches) {
+    const wrapper = document.querySelector(".how-we-deliver");
+
+    if (wrapper) {
+        const navItems = wrapper.querySelectorAll(".hwd-nav-item");
+        const panels = wrapper.querySelectorAll(".hwd-info-inner");
+        navItems[0]?.classList.add("active");
+
+        // --------------------------------------------------------------
+        // Main pinned animation
+        // --------------------------------------------------------------
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: wrapper,
+                start: "top top",
+                end: () => "+=" + (panels.length * window.innerHeight),
+                pin: true,
+                scrub: 1,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+
+                onUpdate: self => {
+                    const progress = self.progress;
+                    const index = Math.min(
+                        Math.floor(progress * panels.length),
+                        panels.length - 1
+                    );
+                    activateNav(index);
+                }
+            }
+        });
+
+        // --------------------------------------------------------------
+        // Move right content
+        // --------------------------------------------------------------
+        const getMoveDistance = () => {
+            const firstPanel = panels[0];
+            const lastPanel = panels[panels.length - 1];
+            return lastPanel.offsetTop - firstPanel.offsetTop;
+        };
+
+        tl.to(".hwd-scroll-text", {
+            y: () => -getMoveDistance(),
+            ease: "none"
+        });
+
+        // --------------------------------------------------------------
+        // Active Navigation
+        // --------------------------------------------------------------
+        function activateNav(index) {
+            navItems.forEach((item, i) => {
+                item.classList.toggle("active", i === index);
+            });
+        }
+
+        // --------------------------------------------------------------
+        // Click Navigation
+        // --------------------------------------------------------------
+        navItems.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                const st = tl.scrollTrigger;
+                if (!st) return;
+
+                const firstPanel = panels[0];
+                const panelOffset =
+                    panels[index].offsetTop - firstPanel.offsetTop;
+
+                const totalMoveDistance =
+                    getMoveDistance();
+            
+                let progress =
+                    panelOffset / totalMoveDistance;
+
+                // Keep progress between 0 and 1
+                progress = gsap.utils.clamp(0, 1, progress);
+                const targetScroll =
+                    st.start +
+                    (st.end - st.start) * progress;
+
+                // ------------------------------------------------------
+                // Smooth scroll
+                // ------------------------------------------------------
+                gsap.to(window, {
+                    duration: 0,
+                    scrollTo: {
+                        y: targetScroll,
+                        autoKill: false
+                    },
+                    ease: "power3.inOut"
+                });
+            });
+        });
+
+        // --------------------------------------------------------------
+        // Refresh on resize
+        // --------------------------------------------------------------
+        window.addEventListener("resize", () => {
+            ScrollTrigger.refresh();
+        });
+    }
+}
+
+// Accordion from <1200 device
+if (window.matchMedia("(max-width: 1199px)").matches) {
+    const accordionItemHeaders = document.querySelectorAll(".hwd-accord-header");
+
+    accordionItemHeaders.forEach((accordionItemHeader, index) => {
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+
+        // First item open by default
+        if (index === 0) {
+            accordionItemHeader.classList.add("active");
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        }
+
+        accordionItemHeader.addEventListener("click", () => {
+            const isActive = accordionItemHeader.classList.contains("active");
+            // Close all other items
+            accordionItemHeaders.forEach(otherHeader => {
+                const otherBody = otherHeader.nextElementSibling;
+
+                otherHeader.classList.remove("active");
+                otherBody.style.maxHeight = "0px";
+            });
+            // Open clicked item if it wasn't already active
+            if (!isActive) {
+                accordionItemHeader.classList.add("active");
+                accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+            }
+        });
+    });
+}
+
+// end

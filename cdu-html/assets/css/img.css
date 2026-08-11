@@ -13,3 +13,5 @@
 
 /*Path CSS End*/
 
+.map-bg::after {background-image: url(../images/cdu-assets/map-bg-img.png);}
+
