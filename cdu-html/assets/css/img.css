@@ -1,0 +1,15 @@
+
+
+/*Path CSS Start*/
+
+.btn-with-arrow:after{content:'';background:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/right-arrow.svg?v=1786359977');width:43px;height:43px;background-size:22px;background-repeat:no-repeat;background-position:center;display:inline-block;vertical-align:middle;background-color:#f8ce5a;border-radius:100%;position:absolute;right:7px;top:0px;bottom:0px;margin:auto;    /*  transition: all 400ms ease-in-out;transform: rotate(0deg);*/}
+.btn-with-arrow.border-btn:after{content:'';background:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/w-right-arrow.svg?v=1786092739');background-color:#000;background-size:22px;background-repeat:no-repeat;background-position:center;}
+.btn.btn-with-arrow.yellow-btn:after{background:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/w-right-arrow.svg?v=1786092739');background-color:#000;background-size:22px;background-repeat:no-repeat;background-position:center;}
+.banner-wrap{padding:80px 0px 50px;display:table-cell;vertical-align:middle;background:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/banner-bg.png?v=1786093830');background-size:cover;background-repeat:no-repeat;background-position:center;border-radius:clamp(35px,3vw,60px);box-shadow:0px 0px 10px rgba(0,0,0,0.15);}
+.our-capabilities .capability-left-card::before{content:"";position:absolute;inset:0;background-image:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/capabilities-bg-img.png?v=1786363433');background-repeat:no-repeat;background-size:cover;background-position:center;transform-origin:center;z-index:-1;background-color:#000000;}
+.rts-cdu-sec.rts-cdu-sec-v1 .rts-cdu-main:after{background-image:url("https://cdn.shopify.com/s/files/1/0786/1472/4748/files/rts-bg-shapev1.webp?v=1786346603");background-size:100%;background-repeat:no-repeat;background-position:top center;top:50px;right:135px;width:190px;}
+.rts-cdu-main{padding:50px 80px 40px;background-image:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/rts-bg-img.png?v=1786339144');background-repeat:no-repeat;background-size:cover;background-position:center;border-radius:24px;-webkit-border-radius:24px;-moz-border-radius:24px;-ms-border-radius:24px;-o-border-radius:24px;overflow:hidden;}
+.rts-cdu-main:after{content:'';position:absolute;z-index:1;background:url("https://cdn.shopify.com/s/files/1/0786/1472/4748/files/rts-bg-shape.png?v=1786339157") no-repeat right center;background-size:contain;width:10%;top:36%;bottom:0px;right:15%;pointer-events:none;}
+
+
+/*Path CSS End*/
