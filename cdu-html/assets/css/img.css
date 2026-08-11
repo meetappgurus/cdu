@@ -11,5 +11,5 @@
 .rts-cdu-main{padding:50px 80px 40px;background-image:url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/rts-bg-img.png?v=1786339144');background-repeat:no-repeat;background-size:cover;background-position:center;border-radius:24px;-webkit-border-radius:24px;-moz-border-radius:24px;-ms-border-radius:24px;-o-border-radius:24px;overflow:hidden;}
 .rts-cdu-main:after{content:'';position:absolute;z-index:1;background:url("https://cdn.shopify.com/s/files/1/0786/1472/4748/files/rts-bg-shape.png?v=1786339157") no-repeat right center;background-size:contain;width:10%;top:36%;bottom:0px;right:15%;pointer-events:none;}
 
-
 /*Path CSS End*/
+
