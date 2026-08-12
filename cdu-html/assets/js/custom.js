@@ -221,6 +221,45 @@ $(document).ready(function() {
         asNavFor: '.slider-nav-wrapper',
     });
 
+    // Work Feature Slider
+    $('.work-features-slider').slick({
+        dots: false,
+        arrows: true,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // speed: 2000,
+
+        responsive: [{
+                breakpoint: 1400,
+                settings: {
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    slidesToShow: 3,
+                    infinite: true,
+                    dots: false
+                }
+            }, {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }, {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
 
     // Team person slider
     $('.team-person-slider').slick({

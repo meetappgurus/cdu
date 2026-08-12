@@ -257,7 +257,9 @@ ul.dropdown-ulmenu li a:before{left:10px;}
 
 
 @media (max-width: 991.98px) { 
-
+.site-header {
+	padding-top: 78px;
+}
 /*.header-main .header-menu .header-menu-inner ul.navbar-nav > li.nav-item .main-menu > a {padding: 3px 15px; display: inline-block; font-size: 40px; font-weight: 600; }*/
 .dropdown-main{padding:10px 15px;background:#FFF8F0;}
 .dropdown-main .s_item_row-main{padding:5px 3px;}
