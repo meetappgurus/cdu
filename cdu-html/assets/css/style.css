@@ -50,7 +50,7 @@ html{scrollbar-color:#FCBC14 #fff;scrollbar-width:thin;scrollbar-border-radius:3
 
 /* Background Color Style CSS BOF */
 .black-bg-overlay{background:#000;}
-.theme-bg-color{background-color:#FCBC14!important;}
+.theme-bg-color{background-color:#F8CE5A!important;}
 .white-bg-color{background-color:#fff!important;}
 .gray-bg-color{background-color:#F4F4F4!important;}
 
@@ -572,9 +572,14 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .portfolio-grid-item .portfolio-btn .btn{position:relative;z-index:3;}
 ul.case--study-type-inner{gap:10px;display:flex;flex-wrap:wrap;}
 ul.case--study-type-inner li a{padding:7px 17px;border-radius:25px;color:#0B0C0E;font-size:14px;text-transform:uppercase;font-weight:400;font-size:calc(0.4vw + 0.1vh + 0.2vmax);backdrop-filter:blur(20px);background:rgba(255,255,255,.8);border:none;}
-.portfolio-grid-item .portfolio-link{position:absolute;left:0;right:0;bottom:0;top:0;z-index:2;width:100%;height:100%;font-size:0;}
+.portfolio-grid-item .portfolio-link{position:absolute;left:0;right:0;bottom:0;top:0;z-index:3;width:100%;height:100%;font-size:0;}
 .portfolio-grid.col-two{padding:15px;}
 .portfolio-grid.col-two .portfolio-grid-item{width:calc(50% - 8px);}
+.close-btn-main .btn-close{position:absolute;right:25px;z-index:1;top:12px;width:30px;height:30px;border:2px solid #2C2C2C;border-radius:50%;-webkit-transition:border-color .2s;transition:all 400ms ease;filter:invert(100%) sepia(2%) saturate(7490%) hue-rotate(202deg) brightness(117%) contrast(118%);background-size:15px;background-color:#fff;-webkit-filter:invert(100%) sepia(2%) saturate(7490%) hue-rotate(202deg) brightness(117%) contrast(118%);}
+.modal-img-main{position:relative;}
+.case-study-modal .modal-img-main img{max-width:100%;width:100%;}
+.modal-img-main .cs-model-bottom{position:absolute;bottom:1%;left:10px;right:10px;padding:50px 25px;max-width:600px;margin:0 auto;text-align:center;border-radius:18px;background:rgb(255,255,255);background:-moz-linear-gradient(180deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,.6) 61%,rgba(255,255,255,.6) 100%);background:-webkit-linear-gradient(180deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,.6) 61%,rgba(255,255,255,.6) 100%);background:linear-gradient(180deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,.6) 61%,rgba(255,255,255,.6) 100%);box-shadow:0 0 53px rgba(255,255,255,.6);}
+.modal-img-main .cs-model-bottom h4{margin-bottom:40px;font-size:30px;}
 
 /* End @madhavi CSS */
 
@@ -602,7 +607,7 @@ ul.case--study-type-inner li a{padding:7px 17px;border-radius:25px;color:#0B0C0E
 .ltdp-cdu-reviews-row{display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;margin:50px 0;}
 .ltdp-cdu-review-box{display:flex;align-items:center;gap:14px;}
 .ltdp-cdu-review-logo{width:60px;height:60px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;    /*box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-                    */box-shadow:0 10px 30px rgba(0,0,0,0.12);-webkit-border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px;-o-border-radius:16px;}
+                        */box-shadow:0 10px 30px rgba(0,0,0,0.12);-webkit-border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px;-o-border-radius:16px;}
     .ltdp-cdu-review-logo img{width:30px;height:30px;object-fit:contain;}
     .ltdp-cdu-review-stars{color:#05080C;font-size:16px;line-height:1;margin-bottom:4px;display:flex;gap:2px;}
     .ltdp-cdu-review-info p{font-size:16px;color:#7F8081;margin-bottom:0;}
@@ -919,7 +924,7 @@ ul.case--study-type-inner li a{padding:7px 17px;border-radius:25px;color:#0B0C0E
     .team-person-info .position{color:#7D8387;font-size:14px;}
     .flip{position:relative;}
     .flip>.front,.flip>.back{display:block;transition-timing-function:cubic-bezier(0.175,0.885,0.32,1.275);transition-duration:1s;transition-property:transform,opacity;}
-    .flip>.front{ transform:rotateY(0deg); -webkit-transform:rotateY(0deg); -moz-transform:rotateY(0deg); -ms-transform:rotateY(0deg); -o-transform:rotateY(0deg); }
+    .flip>.front{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);-moz-transform:rotateY(0deg);-ms-transform:rotateY(0deg);-o-transform:rotateY(0deg);}
     .flip>.back{position:absolute;opacity:0;top:0px;left:0px;width:100%;height:100%;transform:rotateY(-180deg);}
     .flip:hover>.front{transform:rotateY(180deg);}
     .flip:hover>.back{opacity:1;transform:rotateY(0deg);}
