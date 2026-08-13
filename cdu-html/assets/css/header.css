@@ -274,7 +274,7 @@ ul.sub-menu li.sub-menu-link a{font-size:16px;}
 
 .header-menu .hedear-call-us li button.btn{min-width:180px;font-size:14px;padding:10px;}
 .header-menu .hedear-call-us li button.btn:after{display:none;}
-.header-main .header-inner-main .header-menu-inner .header-btn-main {justify-content: center;display: flex;flex-wrap: wrap;align-items: flex-start;max-width: 93%;margin: auto;padding: 12px;margin-bottom: 30px;margin-top: 50px;flex-direction: column-reverse;width: 100%;}
+.header-main .header-inner-main .header-menu-inner .header-btn-main {justify-content: center;display: flex;flex-wrap: wrap;align-items: flex-start;padding: 12px;flex-direction: column-reverse;width: 100%;}
 .header-main .header-inner-main .header-inner .header-menu .header-menu-inner {position: fixed;top: 0px;left: 0px;right: 0px;background: #000;z-index: 777;height: 0;overflow: auto;transition: all 400ms ease;/* transform: translateX(-100%); */visibility: hidden;opacity: 0;padding-bottom: 5vh;width: 100%;max-width: 91%;margin: auto;border-top-right-radius: 15px;border-top-left-radius: 15px;border-radius: 15px;box-shadow: 1px 8px 16px rgba(0, 0, 0, 0.7);}
 .header-main .header-inner-main .header-inner .header-menu.show .header-menu-inner {transform: translateX(0);visibility: visible;opacity: 1;height: calc(93vh - 85px);top: 75px;}
 .header-main .header-inner-main .header-inner .header-menu ul li a {margin: 0; padding: 4px 10px; width: auto; color: #fff; font-size: 24px; }

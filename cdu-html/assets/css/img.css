@@ -15,3 +15,9 @@
 
 .map-bg::after {background-image: url(../images/cdu-assets/map-bg-img.png);}
 
+.contactUs-page-right ul.banner-point li:before {
+    background: url(../images/right-icon-black.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

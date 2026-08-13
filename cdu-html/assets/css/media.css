@@ -883,6 +883,10 @@
 		padding-top: 60px;
 	}
 
+	.ts-footer .review-user-info {
+		max-width: 280px;
+	}
+
 	.blogs-sl-main .blog-card .blog-img {
 		margin-bottom: 16px;
 	}
@@ -1511,6 +1515,10 @@
 
 	.ts-review-right .overall-rating {
 		gap: 6px;
+	}
+
+	.ts-footer .review-user-info {
+		max-width: 240px;
 	}
 
 	.blog-card .blog-title {
@@ -2849,6 +2857,10 @@
 		margin-right: 0;
 	}
 
+	.ts-footer .review-user-info {
+		max-width: 100%;
+	}
+
 	.client-testimonials .ts-review-user::after {
 		display: none;
 	}
@@ -3056,6 +3068,7 @@
 	.work-d-info .work-d-info-row {
 		padding: 30px 0px;
 	}
+
 }
 
 
