@@ -1278,7 +1278,8 @@
 		height: 55px;
 	}
 
-	.how-we-deliver .consultant-cta .play-ic img {
+	.how-we-deliver .consultant-cta .play-ic img,
+	.how-we-deliver .consultant-cta .play-ic svg {
 		width: 35px;
 	}
 
@@ -3038,7 +3039,8 @@
 		font-size: 12px;
 	}
 
-	.how-we-deliver .consultant-cta .play-ic img {
+	.how-we-deliver .consultant-cta .play-ic img,
+	.how-we-deliver .consultant-cta .play-ic svg {
 		width: 30px;
 	}
 

@@ -553,7 +553,8 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .how-we-deliver .consultant-cta .consultant-avatar img{width:100%;height:100%;object-fit:cover;}
 .how-we-deliver .consultant-cta .consultant-av-wrap{position:relative;z-index:1;padding-right:22px;}
 .how-we-deliver .consultant-cta .play-ic{position:absolute;inset:0;display:flex;align-items:center;justify-content:end;}
-.how-we-deliver .consultant-cta .play-ic img{width:40px;}
+.how-we-deliver .consultant-cta .play-ic img,
+.how-we-deliver .consultant-cta .play-ic svg{width:40px;}
 .how-we-deliver .consultant-cta .consultant-left{display:flex;align-items:center;gap:16px;padding-right:20px;}
 .how-we-deliver .consultant-cta .contact-greet{font-size:18px;}
 .how-we-deliver .consultant-cta .cta-main{margin-left:auto;}
@@ -859,7 +860,7 @@ ul.work-d-text-points li{font-size:30px;}
     .contactUs-page-wrap form .form-group-main{display:flex;flex-direction:column;    /* justify-content: space-between; */height:100%;}
     .contactUs-page-wrap .form-bottom-text{font-size:15px;line-height:22px;}
     .contact-us-page.banner-sec{min-height:auto;}
-    .cdu-awards-sec{background:#FFFFFF;padding:65px 0px 80px;}
+    .cdu-awards-sec{background:#f4f8f9;padding:65px 0px 80px;}
     .cdu-awards-sec .cdu-awards-top{margin-bottom:60px;}
     .cdu-awards-row{display:flex;gap:15px;}
 
