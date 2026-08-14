@@ -1200,7 +1200,8 @@
 		background-color: #fff;
 		padding: 16px 48px 16px 16px;
 		display: flex;
-		align-items: center;
+		align-items: start;
+		text-align: start;
 		position: relative;
 		cursor: pointer;
 		border: none;

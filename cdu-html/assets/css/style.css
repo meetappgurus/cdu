@@ -563,7 +563,7 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .banner-custom{min-height:auto;}
 .banner-custom .banner-wrap{box-shadow:none;background-image:none;}
 .portfolio-grid{display:flex;flex-wrap:wrap;gap:15px;}
-.portfolio-grid-item{position:relative;z-index:1;}
+.portfolio-grid-item{position:relative;}
 .portfolio-grid.col-one .portfolio-grid-item{width:100%;}
 .portfolio-grid-item .portfolio-img{max-width:100%;width:100%;}
 .portfolio-grid-item .portfolio-item-info{position:absolute;    /* z-index: 1; */top:5%;left:0;right:0;max-width:1640px;width:87%;margin:auto;padding:15px;}
@@ -1309,6 +1309,20 @@ ul.work-d-text-points li{font-size:30px;}
 		.blog-details-row .about-cdu-left{width:285px}
 		.learn-more-link{font-size:14px}
 		.blog-details-row .blog-details-main{width:calc(100% - 285px);padding-left:25px}
+        .select-menu .select-btn{border:1px solid #ccc;display:flex;height:55px;background:#fff;padding:20px;font-size:16px;font-weight:400;border-radius:8px;align-items:center;cursor:pointer;justify-content:space-between;box-shadow:0 0 5px rgba(0,0,0,0.1);}
+        .select-menu .options{position:absolute;max-width:90%;width:100%;overflow-y:auto;max-height:295px;padding:10px;margin-top:10px;border-radius:8px;background:#fff;box-shadow:0 0 10px rgba(0,0,0,0.1);animation-name:fadeInDown;-webkit-animation-name:fadeInDown;animation-duration:0.35s;animation-fill-mode:both;-webkit-animation-duration:0.35s;-webkit-animation-fill-mode:both;}
+        .select-menu .options .option{display:flex;min-height:40px;cursor:pointer;padding:0 16px;border-radius:8px;align-items:center;background:#fff;}
+        .select-menu .options .option:hover{background:#f2f2f2;}
+        .select-menu .options .option .option-text{font-size:16px;color:#333;}
+        .select-menu.active .options{display:block;opacity:0;z-index:10;animation-name:fadeInUp;-webkit-animation-name:fadeInUp;animation-duration:0.4s;animation-fill-mode:both;-webkit-animation-duration:0.4s;-webkit-animation-fill-mode:both;}
+        @keyframes fadeInUp{
+            from{transform:translate3d(0,30px,0);}
+            to{transform:translate3d(0,0,0);opacity:1;}
+        }
+        @keyframes fadeInDown{
+            from{transform:translate3d(0,0,0);opacity:1;}
+            to{transform:translate3d(0,20px,0);opacity:0;}
+        }
 	}
 	@media (max-width:767.98px){
 		.blog-sec-main .blog-left .blog-left-col{width:100%}
@@ -1322,11 +1336,16 @@ ul.work-d-text-points li{font-size:30px;}
 		.blog-details-row{flex-direction:column-reverse}
 		.blog-details-sec{padding-top:10px}
 		.blog-left-col .blog-left-img{height:auto}
+        .select-menu .options{max-width:calc(90% - 5px);}
 	}
+    @media (max-width:600px){
+        .select-menu .options{max-width:calc(90% - 10px);}
+    }
 	@media (max-width:576px){
 		.all-insights-row .blog--col{width:100%}
 		.blog--col .blog--img{height:auto}
 		.all-insights-row{gap:25px}
 		.blog--date{margin-bottom:8px}
 		.blog--col .blog--title h4{font-size:16px}
+        .select-menu .options{max-width:calc(100% - 40px);}
 	}
