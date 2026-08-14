@@ -299,6 +299,41 @@ $(document).ready(function() {
         }]
     });
 
+    // ==================================================================
+    //        Categories Select Options JS START
+    // ================================================================== 
+
+    // Select the menu element
+    const menu = document.querySelector(".select-menu");
+
+    if (menu) {
+        // Select the button and text elements within the menu
+        const selectBtn = menu.querySelector(".select-btn");
+        const sBtnText = menu.querySelector(".sBtn-text");
+
+        if (selectBtn && sBtnText) {
+            // Add click event listener to the select button
+            selectBtn.onclick = () => menu.classList.toggle("active");
+
+            // Add click event listeners to all options
+            const options = menu.querySelectorAll(".option");
+            options.forEach((option) => {
+                const optionText = option.querySelector(".option-text");
+                if (optionText) {
+                    option.onclick = () => {
+                        sBtnText.innerText = optionText.innerText;
+                        menu.classList.remove("active");
+                    };
+                }
+            });
+        } 
+    };
+
+    // ==================================================================
+    //        Categories Select Options JS END
+    // ==================================================================  
+
+
     // Services Tabs JS Start
 
     $('.service-tab').on('click', function (e) {
