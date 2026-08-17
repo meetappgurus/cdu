@@ -85,7 +85,7 @@ $(document).ready(function() {
         touchMove: true,
         edgeFriction: 0,
         swipeToSlide: false,
-        touchThreshold: 20,
+        touchThreshold: 100,
         infinite: false,
         autoplay: false,
         variableWidth: false,
@@ -174,6 +174,7 @@ $(document).ready(function() {
             cssEase: 'ease-in-out',
             infinite: true,
             autoplay: false,
+            touchThreshold: 100,
             prevArrow: $wrap.find('.pagination-prev'),
             nextArrow: $wrap.find('.pagination-next'),
             variableWidth: false
@@ -188,6 +189,7 @@ $(document).ready(function() {
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         focusOnSelect: true,
+        touchThreshold: 100,
         arrows: true,
         infinite: true,
         centerMode: true,
@@ -215,10 +217,25 @@ $(document).ready(function() {
         slidesToScroll: 1,
         fade: true,
         speed: 600,
+        touchThreshold: 100,
         infinite: true,
         adaptiveHeight: true,
         arrows: false,
         asNavFor: '.slider-nav-wrapper',
+    });
+
+    // Header Service logo slider
+    $('.sdropdown-slider').slick({
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        infinite: true,
+        variableWidth: true,
+        autoplaySpeed: 2000,
+        speed: 500,
+        touchThreshold: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
     });
 
     // Work Feature Slider
@@ -230,7 +247,7 @@ $(document).ready(function() {
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        touchThreshold: 100,
+        touchThreshold: 500,
         // speed: 2000,
 
         responsive: [{
@@ -268,6 +285,7 @@ $(document).ready(function() {
         arrows: true,
         autoplay: false,
         autoplaySpeed: 2000,
+        touchThreshold: 100,
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -373,7 +391,7 @@ $(document).ready(function() {
                     arrows: false,
                     dots: true,
                     infinite: false,
-                    touchThreshold: 20,
+                    touchThreshold: 100,
                     speed: 500,
                     responsive: [
                         {
@@ -462,7 +480,7 @@ $(document).ready(function() {
         slidesToScroll: 1,
         edgeFriction: 0,
         swipeToSlide: false,
-        touchThreshold: 20,
+        touchThreshold: 100,
         infinite: false,
         variableWidth: true,
         arrows: false,
@@ -526,23 +544,13 @@ window.addEventListener("load", () => {
     const buildBlock = document.querySelector(".cs-build-something");
     if (!section || !cardsWrap || !lastCard) return;
 
-    if (window.innerWidth >= 1200) {
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1200px)", () => {
         const endTarget = buildBlock || lastCard;
 
         function getMoveDistance() {
-            const rect = endTarget.getBoundingClientRect();
-
-            let bottomGap;
-
-            if (window.innerWidth > 1536) {
-                // > 1536px
-                bottomGap = 960;
-            } else {
-                // 1200px - 1536px
-                bottomGap = 820; // Change this value as needed
-            }
-
-            return endTarget.offsetTop + rect.height - (window.innerHeight - bottomGap);
+            return endTarget.offsetTop + endTarget.offsetHeight;
         }
 
         const tl = gsap.timeline({
@@ -586,13 +594,15 @@ window.addEventListener("load", () => {
             ease: "none",
             duration: 1
         }, 0);
-    } else if (window.innerWidth >= 769) {
+    });
+
+    mm.add("(min-width: 769px) and (max-width: 1199px)", () => {
         let endValue;
 
         if (window.innerWidth >= 992) {
             endValue = 2400;
         } else {
-            endValue = 2200;
+            endValue = 2150;
         }
 
         const tl = gsap.timeline({
@@ -613,7 +623,9 @@ window.addEventListener("load", () => {
             ease: "none",
             duration: 1
         }, 0);
-    } else if (window.innerWidth >= 300) {
+    });
+    
+    mm.add("(min-width: 300px) and (max-width: 768px)", () => {
         let endValue;
 
         if (window.innerWidth >= 575) {
@@ -642,8 +654,7 @@ window.addEventListener("load", () => {
             ease: "none",
             duration: 1
         }, 0);
-    }
-
+    });
 
     setTimeout(() => {
         ScrollTrigger.refresh();
