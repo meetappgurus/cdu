@@ -23,6 +23,36 @@ $(document).ready(function() {
         });
 
 
+        $(function(){
+            let lastScrollTop = 0;
+            const $header = $('.header-main');
+            const navHeight = $header.outerHeight();
+
+            $(window).on('scroll', function () {
+
+                const currentScroll = $(this).scrollTop();
+
+                // Header background / active state
+                if (currentScroll > navHeight) {
+                    $header.addClass('active');
+                } else {
+                    $header.removeClass('active');
+                }
+
+                // Scroll direction
+                if (currentScroll > lastScrollTop && currentScroll > navHeight) {
+                    // Scrolling down
+                    $header.removeClass('sticky');
+                } else {
+                    // Scrolling up
+                    $header.addClass('sticky');
+                }
+
+                lastScrollTop = currentScroll;
+            });
+        });
+	
+
     // ==================================================================
     //                    Header JS END
     // ==================================================================  

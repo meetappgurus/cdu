@@ -114,7 +114,7 @@ ul.f-menu li{margin:10px 0px;}
 
 
 .footer-name-wp{text-align:center;}
-.footer-name-wp .footer-name{color:#A5A5A5;line-height:1;font-size:clamp(18px,9.3vw,185px);font-weight:800;white-space:nowrap;text-align:center;}
+.footer-name-wp .footer-name{color:#2a2a2a;line-height:1;font-size:clamp(18px,9.3vw,185px);font-weight:800;white-space:nowrap;text-align:center;}
 .f-icontext-main{display:flex;margin-top:20px;margin-bottom:50px; flex-wrap: wrap;}
 .f-icontext-main .f-icontext{margin-right:12px;margin-bottom:15px;background:rgba(255,255,255,0.3);padding:12px 10px;border-radius:15px;border:1px solid #dddddd;line-height:1;font-size: 13px;}
 .f-icontext-main .f-icontext svg{margin-right:10px;}
