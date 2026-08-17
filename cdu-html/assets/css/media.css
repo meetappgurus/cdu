@@ -2590,6 +2590,10 @@
 }
 
 @media (max-width: 576px) {
+	.service-page-wrap .section_heading .sec_typo br,
+	.service-detail-page-wrap .section_heading .sec_typo br {
+		display: none;
+	}
 
 	.container {
 		width: 100%;

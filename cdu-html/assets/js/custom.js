@@ -227,9 +227,10 @@ $(document).ready(function() {
         arrows: true,
         autoplay: false,
         autoplaySpeed: 2000,
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
+        touchThreshold: 100,
         // speed: 2000,
 
         responsive: [{

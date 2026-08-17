@@ -476,7 +476,7 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .salesforce-sec .avatar-wrap{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 12px;border:1px solid #DDDDDD;}
 .salesforce-sec .specialist-name{color:#fff;font-size:16px;font-weight:700;margin-bottom:2px;}
 .salesforce-sec .specialist-role{color:#7F8081;font-size:14px;line-height:1.4;}
-.provide-service-label .sr-re-label:hover{color:#FCBC14;}
+.provide-service-label .sr-re-label:hover{border-color:#fcbc14;background-color:#fcbc14;}
 
 /* Service Detail Page */
 .hero-sub-heading{color:#0B0C0E;font-size:18px;font-weight:500;padding:10px 16px;border-radius:50px;background-color:rgba(0,0,0,10%);margin-bottom:10px;width:fit-content;}
