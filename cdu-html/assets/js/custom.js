@@ -597,26 +597,37 @@ window.addEventListener("load", () => {
         });
 
         if (headingLeft && headingRight) {
-            let headingDuration;
+            const getAnimDistance = () => {
+                const headingRect = headingLeft.getBoundingClientRect();
+                const cardRect = cards[0].getBoundingClientRect();
+                const dist = cardRect.top - headingRect.bottom;
+                const safetyMargin = 80;
+                return Math.max(50, dist - safetyMargin);
+            };
 
-            if (window.innerWidth > 1800) {
-                headingDuration = 0.15;
-            } else if (window.innerWidth > 1500) {
-                headingDuration = 0.10;
-            } else if (window.innerWidth >= 1200) {
-                headingDuration = 0.10;
-            }
+            gsap.to(headingLeft, {
+                xPercent: -100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: () => "+=" + getAnimDistance(),
+                    scrub: 1.2,
+                    invalidateOnRefresh: true
+                }
+            });
 
-            tl.to(headingLeft, {
-                    xPercent: -100,
-                    ease: "none",
-                    duration: headingDuration
-                }, 0)
-                .to(headingRight, {
-                    xPercent: 100,
-                    ease: "none",
-                    duration: headingDuration
-                }, 0);
+            gsap.to(headingRight, {
+                xPercent: 100,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top top",
+                    end: () => "+=" + getAnimDistance(),
+                    scrub: 1.2,
+                    invalidateOnRefresh: true
+                }
+            });
         }
 
         tl.to(cardsWrap, {
