@@ -1,57 +1,58 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // ==================================================================
     //                    Header JS Start
     // ==================================================================    
 
-        // scroll hide and show
+    // scroll hide and show
 
-        $('.navbar-nav li a').on('click', function() {
-            $('.navbar-collapse').collapse('hide');
-        });
+    $('.navbar-nav li a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
 
-        $(".navbar-toggler").click(function() {
-            $("body").toggleClass("no-scroll");
-        });
+    $(".navbar-toggler").click(function () {
+        $("body").toggleClass("no-scroll");
+    });
 
-        $(".header-menu a").click(function() {
-            $("body").removeClass("no-scroll");
-        });
+    $(".header-menu a").click(function () {
+        $("body").removeClass("no-scroll");
+    });
 
-        $('.header-btn-main a').on('click', function() {
-            $('.navbar-collapse').collapse('hide');
-        });
+    $('.header-btn-main a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
 
 
-        $(function(){
-            let lastScrollTop = 0;
-            const $header = $('.header-main');
-            const navHeight = $header.outerHeight();
+   
+    // Header sticky when scroll down
+    $(function(){
+        // Disable header scroll JS only on service.html
+        if ($('.services-tabs-sticky').length) {
+            return;
+        }
 
-            $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        var navHeight = $('.header-main').outerHeight();
+        var scrollThreshold = 100;
+      
+        $(window).scroll(function(){
+            var scrolled = $(document).scrollTop();
+            if(scrolled > navHeight){
 
-                const currentScroll = $(this).scrollTop();
-
-                // Header background / active state
-                if (currentScroll > navHeight) {
-                    $header.addClass('active');
-                } else {
-                    $header.removeClass('active');
+            $('.header-main').addClass('active');
+                }else{
+            $('.header-main').removeClass('active');
                 }
 
-                // Scroll direction
-                if (currentScroll > lastScrollTop && currentScroll > navHeight) {
-                    // Scrolling down
-                    $header.removeClass('sticky');
-                } else {
-                    // Scrolling up
-                    $header.addClass('sticky');
+            if(scrolled > scroll){
+                $('.header-main').removeClass('sticky');
+                }else{
+                $('.header-main').addClass('sticky');
                 }
-
-                lastScrollTop = currentScroll;
+            
+                scroll = $(document).scrollTop();
             });
-        });
-	
+    }); 
 
     // ==================================================================
     //                    Header JS END
@@ -60,7 +61,7 @@ $(document).ready(function() {
 
     var btnscrolltop = $(".scroll-top");
 
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(window).scrollTop() > 300) {
             btnscrolltop.addClass("show");
         } else {
@@ -68,7 +69,7 @@ $(document).ready(function() {
         }
     });
 
-    btnscrolltop.on("click", function(e) {
+    btnscrolltop.on("click", function (e) {
         e.preventDefault();
         $("html, body").animate({
             scrollTop: 0
@@ -86,23 +87,23 @@ $(document).ready(function() {
         cssEase: "linear",
         pauseOnHover: false,
         responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    infinite: true,
-                    dots: false
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                }
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 4,
+                infinite: true,
+                dots: false
             }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+            }
+        }
         ]
     });
 
@@ -174,7 +175,7 @@ $(document).ready(function() {
 
     $cur.text('01');
 
-    $slider.on('afterChange', function(event, slick, currentSlide) {
+    $slider.on('afterChange', function (event, slick, currentSlide) {
         $cur.text(String(currentSlide + 1).padStart(2, '0'));
     });
 
@@ -182,13 +183,13 @@ $(document).ready(function() {
 
     // Client-testimonials JS Start
 
-    (function() {
+    (function () {
         let $wrap = $('.client-testimonials');
         let $slider = $wrap.find('.testimonial-main-slider');
         let $cur = $wrap.find('.cs-cur');
         let $total = $wrap.find('.cs-total');
 
-        $slider.on('init reInit afterChange', function(event, slick, currentSlide) {
+        $slider.on('init reInit afterChange', function (event, slick, currentSlide) {
             let i = (currentSlide || 0) + 1;
             $cur.text(String(i).padStart(2, '0'));
             $total.text(String(slick.slideCount).padStart(2, '0'));
@@ -281,30 +282,30 @@ $(document).ready(function() {
         // speed: 2000,
 
         responsive: [{
-                breakpoint: 1400,
-                settings: {
-                    autoplay: true,
-                    autoplaySpeed: 2000,
-                    slidesToShow: 3,
-                    infinite: true,
-                    dots: false
-                }
-            }, {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                }
-            }, {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                }
+            breakpoint: 1400,
+            settings: {
+                autoplay: true,
+                autoplaySpeed: 2000,
+                slidesToShow: 3,
+                infinite: true,
+                dots: false
             }
+        }, {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
         ]
     });
 
@@ -320,7 +321,7 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         // speed: 2000,
- 
+
         responsive: [{
             breakpoint: 1400,
             settings: {
@@ -375,7 +376,7 @@ $(document).ready(function() {
                     };
                 }
             });
-        } 
+        }
     };
 
     // ==================================================================
@@ -387,7 +388,7 @@ $(document).ready(function() {
 
     $('.service-tab').on('click', function (e) {
         e.preventDefault();
-      
+
         const $this = $(this);
         const target = $this.attr('href');
         const $target = $(target);
@@ -498,7 +499,7 @@ $(document).ready(function() {
 
     // Slick Slider Methodology
 
-    $('.methodology-rtl').on('init afterChange', function(event, slick, currentSlide) {
+    $('.methodology-rtl').on('init afterChange', function (event, slick, currentSlide) {
         let current = currentSlide || 0;
 
         $('.methodology-slide').removeClass('is-active');
@@ -574,15 +575,15 @@ window.addEventListener("load", () => {
     const buildBlock = document.querySelector(".cs-build-something");
     if (!section || !cardsWrap || !lastCard) return;
 
+    const endTarget = buildBlock || lastCard;
+
+    function getMoveDistance() {
+        return endTarget.offsetTop + endTarget.offsetHeight;
+    }
+
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 1200px)", () => {
-        const endTarget = buildBlock || lastCard;
-
-        function getMoveDistance() {
-            return endTarget.offsetTop + endTarget.offsetHeight;
-        }
-
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
@@ -638,19 +639,11 @@ window.addEventListener("load", () => {
     });
 
     mm.add("(min-width: 769px) and (max-width: 1199px)", () => {
-        let endValue;
-
-        if (window.innerWidth >= 992) {
-            endValue = 2400;
-        } else {
-            endValue = 2150;
-        }
-
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
                 start: "top top",
-                end: "+=" + endValue,
+                end: () => "+=" + getMoveDistance(),
                 pin: true,
                 scrub: 1.2,
                 anticipatePin: 1,
@@ -660,28 +653,18 @@ window.addEventListener("load", () => {
         });
 
         tl.to(cardsWrap, {
-            y: () => -endValue,
+            y: () => -getMoveDistance(),
             ease: "none",
             duration: 1
         }, 0);
     });
-    
+
     mm.add("(min-width: 300px) and (max-width: 768px)", () => {
-        let endValue;
-
-        if (window.innerWidth >= 575) {
-            endValue = 1800;
-        } else if (window.innerWidth >= 400) {
-            endValue = 1650;
-        } else {
-            endValue = 1700;
-        }
-
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
                 start: "top top",
-                end: "+=" + endValue,
+                end: () => "+=" + getMoveDistance(),
                 pin: true,
                 scrub: 1.2,
                 anticipatePin: 1,
@@ -691,7 +674,7 @@ window.addEventListener("load", () => {
         });
 
         tl.to(cardsWrap, {
-            y: () => -endValue,
+            y: () => -getMoveDistance(),
             ease: "none",
             duration: 1
         }, 0);
@@ -785,7 +768,7 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
 
                 const totalMoveDistance =
                     getMoveDistance();
-            
+
                 let progress =
                     panelOffset / totalMoveDistance;
 
