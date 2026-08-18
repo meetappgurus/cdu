@@ -670,7 +670,6 @@ window.addEventListener("load", () => {
                 scrub: 0.6,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
-                pinType: "transform",
                 fastScrollEnd: true,
                 markers: false
             }
@@ -718,7 +717,6 @@ window.addEventListener("load", () => {
                 scrub: 0.6,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
-                pinType: "transform",
                 fastScrollEnd: true,
                 markers: false
             }
