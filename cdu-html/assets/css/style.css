@@ -480,10 +480,10 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 
 /* Service Detail Page */
 .hero-sub-heading{color:#0B0C0E;font-size:18px;font-weight:500;padding:10px 16px;border-radius:50px;background-color:rgba(0,0,0,10%);margin-bottom:10px;width:fit-content;}
-.salesforce-sec .salesforce-img,.salesforce-sec .sf-right-img{overflow:hidden;border-radius:14px;-webkit-border-radius:14px;-moz-border-radius:14px;-ms-border-radius:14px;-o-border-radius:14px;max-width:330px;}
+.salesforce-sec .salesforce-img,.salesforce-sec .sf-right-img{overflow:hidden;border-radius:14px;-webkit-border-radius:14px;-moz-border-radius:14px;-ms-border-radius:14px;-o-border-radius:14px;max-width:330px;aspect-ratio: 330 / 300;}
 .salesforce-sec .salesforce-middle .sec_typo{text-transform:capitalize;}
-.salesforce-sec .sf-right-img{max-width:412px;}
-.salesforce-sec .salesforce-img img,.salesforce-sec .sf-right-img img{width:100%;height:auto;object-fit:cover;}
+.salesforce-sec .sf-right-img{max-width:412px; max-height: 356px;}
+.salesforce-sec .salesforce-img img,.salesforce-sec .sf-right-img img{width:100%;height:100%;object-fit:cover;object-position: 100%;}
 .salesforce-sec .salesforce-ratting{display:flex;align-items:center;gap:15px;margin:30px 0 0;}
 .salesforce-sec .salesforce-ratting img{max-width:clamp(120px,10vw,180px);}
 .salesforce-sec .sf-ratting-text span{font-size:14px;}
@@ -494,7 +494,7 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .salesforce-middle{max-width:500px;flex:0 0 auto;}
 .salesforce-right{max-width:412px;flex:0 0 auto;}
 .sf-hero-tags.tech-stack{margin-bottom:20px;}
-.sf-hero-tags.tech-stack span,.sf-hero-tags.tech-stack .sr-re-label{background-color:#fff;border:1px solid #DDDDDD;font-weight:300;font-size:0.8vw;padding:8px 20px;}
+.sf-hero-tags.tech-stack span,.sf-hero-tags.tech-stack .sr-re-label{background-color:#fff;border:1px solid #DDDDDD;font-weight:300;font-size:0.8vw;padding:8px 15px;}
 .sf-hero-tags.tech-stack span:nth-child(1),.sf-hero-tags.tech-stack .sr-re-label:nth-child(1){background-color:#FFE482;border-color:transparent;}
 .sf-hero-tags.tech-stack span:nth-child(2),.sf-hero-tags.tech-stack .sr-re-label:nth-child(2){background-color:#FF8F6D;border-color:transparent;color:#fff;}
 .sf-capability-grid .sf-cap-item{display:flex;align-items:center;height:100%;border-bottom:1px solid #dddd;gap:20px;padding:34px 0;}
@@ -520,7 +520,8 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .sr-benifits-items-wrap .sr-benifits-item{display:flex;align-items:center;gap:14px;}
 .sr-benifits-items-wrap .sr-benifits-item:last-child{margin-bottom:0!important;}
 .sr-benifits-box .btn{font-weight:300;font-size:16px;padding:14px 54px 14px 20px;}
-.sr-benifits-box .btn.btn-with-arrow:after{width:40px;height:40px;right:2px;}
+.sr-benifits-box .btn.btn-with-arrow:before{left: -48px;}
+.sr-benifits-box .btn.btn-with-arrow:after{width:32px;height:32px;right:6px;}
 .sr-detail-platforms .s-details-wrap{max-height:600px;width:100%;overflow: hidden;}
 .sr-detail-platforms .s-details-wrap img{width:100%;height:100%;object-fit:cover;object-position: center;display: block;}
 .sf-why-section .sf-stats h4{font-size:30px;}

@@ -1990,6 +1990,7 @@
 		max-height: 320px;
 		min-height: 320px;
 		height: 100%;
+		aspect-ratio: auto;
 	}
 
 	.salesforce-sec .salesforce-img img,
@@ -2590,6 +2591,7 @@
 }
 
 @media (max-width: 576px) {
+
 	.service-page-wrap .section_heading .sec_typo br,
 	.service-detail-page-wrap .section_heading .sec_typo br {
 		display: none;
