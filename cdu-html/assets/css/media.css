@@ -1388,6 +1388,7 @@
 	.cs-build-something {
 		flex-wrap: wrap;
 		gap: 16px;
+		margin-bottom: 100px;
 	}
 
 	.cs-build-something-middle {

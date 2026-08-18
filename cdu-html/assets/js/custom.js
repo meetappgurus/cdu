@@ -23,9 +23,9 @@ $(document).ready(function () {
     });
 
 
-   
+
     // Header sticky when scroll down
-    $(function(){
+    $(function () {
         // Disable header scroll JS only on service.html
         if ($('.services-tabs-sticky').length) {
             return;
@@ -34,25 +34,25 @@ $(document).ready(function () {
         var scroll = $(document).scrollTop();
         var navHeight = $('.header-main').outerHeight();
         var scrollThreshold = 100;
-      
-        $(window).scroll(function(){
+
+        $(window).scroll(function () {
             var scrolled = $(document).scrollTop();
-            if(scrolled > navHeight){
+            if (scrolled > navHeight) {
 
-            $('.header-main').addClass('active');
-                }else{
-            $('.header-main').removeClass('active');
-                }
+                $('.header-main').addClass('active');
+            } else {
+                $('.header-main').removeClass('active');
+            }
 
-            if(scrolled > scroll){
+            if (scrolled > scroll) {
                 $('.header-main').removeClass('sticky');
-                }else{
+            } else {
                 $('.header-main').addClass('sticky');
-                }
-            
-                scroll = $(document).scrollTop();
-            });
-    }); 
+            }
+
+            scroll = $(document).scrollTop();
+        });
+    });
 
     // ==================================================================
     //                    Header JS END
@@ -639,45 +639,102 @@ window.addEventListener("load", () => {
     });
 
     mm.add("(min-width: 769px) and (max-width: 1199px)", () => {
+
+        const getDynamicDistance = () => {
+
+            // Remove transform before measuring actual content position
+            gsap.set(cardsWrap, {
+                y: 0
+            });
+
+            const sectionRect = section.getBoundingClientRect();
+            const buildRect = endTarget.getBoundingClientRect();
+            const buildStyle = window.getComputedStyle(endTarget);
+            const marginBottom = parseFloat(buildStyle.marginBottom) || 0;
+            const totalContentHeight =
+                buildRect.bottom -
+                sectionRect.top +
+                marginBottom;
+            return Math.max(
+                0,
+                totalContentHeight - window.innerHeight
+            );
+        };
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
                 start: "top top",
-                end: () => "+=" + getMoveDistance(),
+                end: () => "+=" + getDynamicDistance(),
                 pin: true,
-                scrub: 1.2,
+                scrub: 0.6,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
+                pinType: "transform",
+                fastScrollEnd: true,
                 markers: false
             }
         });
 
         tl.to(cardsWrap, {
-            y: () => -getMoveDistance(),
+            y: () => -getDynamicDistance(),
             ease: "none",
             duration: 1
         }, 0);
+
+        return () => {
+            tl.kill();
+        };
     });
 
     mm.add("(min-width: 300px) and (max-width: 768px)", () => {
+
+        const getDynamicDistance = () => {
+
+            gsap.set(cardsWrap, {
+                y: 0
+            });
+
+            const sectionRect = section.getBoundingClientRect();
+            const buildRect = endTarget.getBoundingClientRect();
+            const buildStyle = window.getComputedStyle(endTarget);
+            const marginBottom = parseFloat(buildStyle.marginBottom) || 0;
+            const totalContentHeight =
+                buildRect.bottom -
+                sectionRect.top +
+                marginBottom;
+            return Math.max(
+                0,
+                totalContentHeight - window.innerHeight
+            );
+        };
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
                 start: "top top",
-                end: () => "+=" + getMoveDistance(),
+                end: () => "+=" + getDynamicDistance(),
                 pin: true,
-                scrub: 1.2,
+                scrub: 0.6,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
+                pinType: "transform",
+                fastScrollEnd: true,
                 markers: false
             }
         });
 
+
         tl.to(cardsWrap, {
-            y: () => -getMoveDistance(),
+            y: () => -getDynamicDistance(),
             ease: "none",
             duration: 1
         }, 0);
+
+
+        return () => {
+            tl.kill();
+        };
     });
 
     setTimeout(() => {
