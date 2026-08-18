@@ -667,7 +667,7 @@ window.addEventListener("load", () => {
                 start: "top top",
                 end: () => "+=" + getDynamicDistance(),
                 pin: true,
-                scrub: 0.6,
+                scrub: 0.5,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
                 fastScrollEnd: true,
@@ -689,7 +689,6 @@ window.addEventListener("load", () => {
     mm.add("(min-width: 300px) and (max-width: 768px)", () => {
 
         const getDynamicDistance = () => {
-
             gsap.set(cardsWrap, {
                 y: 0
             });
@@ -714,7 +713,7 @@ window.addEventListener("load", () => {
                 start: "top top",
                 end: () => "+=" + getDynamicDistance(),
                 pin: true,
-                scrub: 0.6,
+                scrub: 0.5,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
                 fastScrollEnd: true,
