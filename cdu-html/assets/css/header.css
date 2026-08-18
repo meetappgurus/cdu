@@ -90,13 +90,13 @@ ul.dropdown-ulmenu li a:before{content:'';width:15px;height:22px;display:inline-
 
 /* Mega menu */
 .header-main .mega-menu-group{margin-bottom:12px;}
-.header-main .mega-menu-title{font-size:14px!important;text-transform:uppercase!important;color:#FCBC14!important;font-weight:600!important;margin-bottom:12px!important;padding:0 8px!important;margin-right:0!important;margin-left:0!important;}
+.header-main .mega-menu-title{display: inline-flex;align-items: center;line-height: 1;font-size:14px!important;text-transform:uppercase!important;color:#FCBC14!important;font-weight:600!important;margin-bottom:12px!important;padding:0 8px!important;margin-right:0!important;margin-left:0!important;}
 .header-main .mega-menu-title:hover{color:#fddd89!important;}
 
 /* .header-main .mega-menu-title:hover svg {
 	stroke: #fddd89;
 } */
-.header-main .mega-menu-title svg,.header-main .mega-menu-title path{transition:all 0.4s ease-in-out 0s;-webkit-transition:all 0.4s ease-in-out 0s;-moz-transition:all 0.4s ease-in-out 0s;-ms-transition:all 0.4s ease-in-out 0s;-o-transition:all 0.4s ease-in-out 0s;}
+.header-main .mega-menu-title svg,.header-main .mega-menu-title path{vertical-align: middle;transition:all 0.4s ease-in-out 0s;-webkit-transition:all 0.4s ease-in-out 0s;-moz-transition:all 0.4s ease-in-out 0s;-ms-transition:all 0.4s ease-in-out 0s;-o-transition:all 0.4s ease-in-out 0s;}
 .header-main .mega-menu-title::after{display:none!important;}
 .services-sub-menu .ssm-col .ssm-link{position:relative;margin:0px!important;font-weight:300!important;padding:8px 8px!important;z-index:1;font-size:15px!important;color:#fff!important;}
 .services-sub-menu .ssm-col .ssm-link:hover{color:#fddd89!important;}
@@ -113,7 +113,7 @@ ul.dropdown-ulmenu li a:before{content:'';width:15px;height:22px;display:inline-
 	display: none;
 }
 
-.header-main .header-inner-main .header-menu-inner .header-btn-main .btn-inner-effect {
+.header-main .header-inner-main .header-menu-inner .header-btn-main.btn-shimmar .btn-inner-effect {
 	display: block;
 	position: absolute;
 	width: 200px;

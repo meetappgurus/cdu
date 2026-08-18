@@ -1190,6 +1190,14 @@
 	}
 
 	/* @madhavi */
+	.banner-sec.map-bg .banner-text-wrap {
+		margin: 0 0 40px;
+	}
+
+	.how-we-deliver {
+		min-height: auto;
+	}
+
 	.hwd-sticky-sl-wrap .custom-accordion .hwd-accordion-item {
 		background-color: #fff;
 		overflow: hidden;
@@ -1671,7 +1679,6 @@
 		font-size: 14px;
 	}
 
-
 	.h1 {
 		font-size: 48px;
 	}
@@ -1696,8 +1703,6 @@
 		font-size: 18px;
 	}
 
-
-
 	.form-control::placeholder {
 		font-size: 15px;
 	}
@@ -1718,6 +1723,9 @@
 		font-size: 15px;
 	}
 
+	.banner-sec.map-bg .banner-text-wrap {
+		margin: 30px 0 30px;
+	}
 
 	.banner-wrap {
 		padding: 40px 20px;
@@ -2220,6 +2228,7 @@
 
 	.trusted-companies-main .client-logo:after {
 		height: 30px;
+		margin: auto;
 	}
 
 	.trusted-companies {
@@ -2631,6 +2640,9 @@
 	}
 
 	/* @madhavi */
+	.banner-sec.map-bg .banner-text-wrap {
+		margin: 10px 0;
+	}
 
 	.banner-custom .banner-wrap,
 	.services-banner .banner-wrap {

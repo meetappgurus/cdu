@@ -273,7 +273,7 @@ $(document).ready(function () {
     $('.work-features-slider').slick({
         dots: false,
         arrows: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         infinite: false,
         slidesToShow: 3,
