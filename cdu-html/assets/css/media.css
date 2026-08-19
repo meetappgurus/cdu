@@ -1060,6 +1060,13 @@
 	}
 }
 
+@media (min-width: 1200px) {
+	.services-tabs-wrap .service-tab:hover,
+	.services-tabs-wrap .service-tab.active {
+		background: #FBEFD9;
+	}
+}
+
 @media (max-width: 1199px) {
 	h1 {
 		font-size: 50px;
@@ -1190,6 +1197,16 @@
 	}
 
 	/* @madhavi */
+	.services-tabs-wrap .service-tab.active {
+		background: #FBEFD9;
+	}
+
+	.rts-btn-main .btn-with-border {
+		padding: 11px 18px 11px;
+		font-size: 12px;
+		line-height: normal;
+	}
+
 	.banner-sec.map-bg .banner-text-wrap {
 		margin: 0 0 40px;
 	}

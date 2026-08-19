@@ -385,29 +385,92 @@ $(document).ready(function () {
 
 
     // Services Tabs JS Start
+    if ($('.service-tab').length) {
 
-    $('.service-tab').on('click', function (e) {
-        e.preventDefault();
+        function moveActiveTabIntoView($tab) {
 
-        const $this = $(this);
-        const target = $this.attr('href');
-        const $target = $(target);
+            const $tabsWrap = $('.services-tabs-wrap');
 
-        // Check target section exists
-        if (!$target.length) {
-            console.warn('Target section not found:', target);
-            return;
+            if (!$tabsWrap.length || !$tab.length) return;
+
+            const wrap = $tabsWrap[0];
+            const tab = $tab[0];
+
+            const wrapRect = wrap.getBoundingClientRect();
+            const tabRect = tab.getBoundingClientRect();
+
+            if (tabRect.right > wrapRect.right) {
+
+                wrap.scrollTo({
+                    left: wrap.scrollLeft + (tabRect.right - wrapRect.right) + 20,
+                    behavior: 'smooth'
+                });
+            }
+            else if (tabRect.left < wrapRect.left) {
+
+                wrap.scrollTo({
+                    left: wrap.scrollLeft - (wrapRect.left - tabRect.left) - 20,
+                    behavior: 'smooth'
+                });
+            }
         }
 
-        // Active class
-        $('.service-tab').removeClass('active');
-        $this.addClass('active');
+        $('.service-tab').on('click', function (e) {
+            e.preventDefault();
+            const $this = $(this);
+            const target = $this.attr('href');
+            const $target = $(target);
 
-        // Scroll to section
-        $('html, body').animate({
-            scrollTop: $target.offset().top - 50
-        }, 0);
-    });
+            // Check target section exists
+            if (!$target.length) {
+                console.warn('Target section not found:', target);
+                return;
+            }
+
+            // Active class
+            $('.service-tab').removeClass('active');
+            $this.addClass('active');
+
+            // Move active tab into visible area
+            moveActiveTabIntoView($this);
+
+            // Scroll to section
+            $('html, body').animate({
+                scrollTop: $target.offset().top - 50
+            }, 0);
+        });
+
+        // Add active class based on scroll position
+        $(window).on('scroll', function () {
+
+            const scrollTop = $(window).scrollTop();
+            const scrollPosition = scrollTop + 100;
+
+            $('.service-tab').each(function () {
+                const $tab = $(this);
+                const target = $tab.attr('href');
+                const $section = $(target);
+                if (!$section.length) return;
+
+                const sectionTop = $section.offset().top;
+                const sectionBottom = sectionTop + $section.outerHeight();
+
+                if (
+                    scrollPosition >= sectionTop &&
+                    scrollPosition < sectionBottom
+                ) {
+
+                    if (!$tab.hasClass('active')) {
+
+                        $('.service-tab').removeClass('active');
+                        $tab.addClass('active');
+
+                        moveActiveTabIntoView($tab);
+                    }
+                }
+            });
+        });
+    }
 
     // end
 
