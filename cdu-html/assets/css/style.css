@@ -226,6 +226,7 @@ ul.contact-shq .cm-icon svg{max-width:100%;}
 .home-ltdp .ltdp-cdu-discuss-avatar>img{width:96px;height:auto;object-fit:initial;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;-o-border-radius:0;}
 .home-ltdp.ltdp-cdu-discuss-bubble:hover .phn-icon{transform:translateX(106px) scale(1);}
 .ltdp-cdu-discuss-bubble.home-ltdp{margin-top:20px;background:#0000001a;box-shadow:none;}
+.ltdp-cdu-discuss-bubble.home-ltdp .ltdp-cdu-discuss-text{text-align: start;}
 .concept-animation-main{background-color:#0B0C0E;position:relative;padding:100px 0 50px;height:100vh;overflow:hidden;box-sizing:border-box;}
 .heading-stage{height:100%;position:absolute;top:0;left:0;width:100%;display:flex;align-items:center;justify-content:center;z-index:2;pointer-events:none;}
 .ani-middle-heading{text-align:center;display:flex;align-items:center;justify-content:center;gap:16px;padding-top:40px;}
