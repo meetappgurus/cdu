@@ -1243,10 +1243,10 @@ ul.work-d-text-points li{font-size:30px;}
 	.blog-details-main h1,.blog-details-main h2,.blog-details-main h3,.blog-details-main h4,.blog-details-main h5,.blog-details-main h6{font-weight:600;margin-bottom:20px;}
 	.banner-sec.blog-details-banner .banner-wrap{background:no-repeat;box-shadow:none;}
 	.see-more-blogs .see-more-blogs-top{padding:50px 0 30px;border-top:1px solid #000}
-	h2.wp-block-heading {font-size: 30px;font-weight: 600}
+	h2.wp-block-heading,.blog-details-main h2 {font-size: 30px;font-weight: 600}
 	.rank-math-question {font-size: 24px;}
-	h1.wp-block-heading {font-size: 30px;}
-	h3.wp-block-heading {font-size: 23px;font-weight: 600}
+	h1.wp-block-heading,.blog-details-main h1 {font-size: 30px;}
+	h3.wp-block-heading,.blog-details-main h3 {font-size: 23px;font-weight: 600}
 	.wp-block-table{overflow-x: auto;}
 	.wp-block-table table{border-collapse:collapse;width:100%}
 	.wp-block-table thead{border-bottom:3px solid}
@@ -1354,11 +1354,11 @@ ul.work-d-text-points li{font-size:30px;}
 		.blog-left-col .blog-left-img{height:240px}
 	}
 	@media (max-width:991.98px){
-		h1.wp-block-heading {font-size: 20px;}
+		h1.wp-block-heading,.blog-details-main h1 {font-size: 20px;}
 		.rank-math-question {font-size: 20px;}
 		.wp-block-list li {	font-size: 14px;}
-		h2.wp-block-heading {font-size:24px;}
-		h3.wp-block-heading {font-size: 20px;}
+		h2.wp-block-heading,.blog-details-main h2 {font-size:24px;}
+		h3.wp-block-heading,.blog-details-main h3 {font-size: 20px;}
 		.blog-sec-main .blog-left{width:100%}
 		.blog-sec-main .blog-right{width:100%;max-width:400px;padding-top:30px;display:none}
 		.blog-page-row .blog-categories-main{width:100%;position:unset;position:unset;margin-bottom:30px}
