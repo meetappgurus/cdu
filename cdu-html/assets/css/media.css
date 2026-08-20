@@ -2299,6 +2299,14 @@
 	}
 
 	/* @madhavi */
+	.home-ltdp.ltdp-cdu-discuss-bubble:hover .phn-icon {
+		transform: translateX(78px) scale(1);
+	}
+
+	.home-ltdp .ltdp-cdu-discuss-avatar>img {
+		width: 71px;
+	}
+
 	.sr-platforms-grid {
 		grid-template-columns: 1fr;
 		gap: 26px;
@@ -2617,6 +2625,24 @@
 }
 
 @media (max-width: 576px) {
+
+	.ltdp-cdu-discuss-bubble.home-ltdp .phn-icon img,
+	.ltdp-cdu-discuss-bubble.home-ltdp .phn-icon {
+		width: 46px;
+		height: 34px;
+	}
+
+	.home-ltdp .ltdp-cdu-discuss-avatar>img {
+		width: 54px;
+	}
+
+	.home-ltdp.ltdp-cdu-discuss-bubble:hover .phn-icon {
+		transform: translateX(64px) scale(1);
+	}
+
+	.ltdp-cdu-discuss-bubble.home-ltdp {
+		gap: 2px;
+	}
 
 	.service-page-wrap .section_heading .sec_typo br,
 	.service-detail-page-wrap .section_heading .sec_typo br {
