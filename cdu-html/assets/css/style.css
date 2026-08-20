@@ -264,7 +264,7 @@ ul.contact-shq .cm-icon svg{max-width:100%;}
 .main-case-slider .case-caption .cs-title{font-size:22px;margin-bottom:8px;}
 .main-case-slider .case-caption .cs-subname{color:#7F8081;font-size:12px;}
 .main-case-slider .case-image-wrap{position:relative;overflow:hidden;height:520px;}
-.case-image-wrap img{width:100%;height:100%;object-fit:cover; border-radius: 20px;}
+.case-image-wrap img{width:100%;height:100%;object-fit:cover;}
 .main-case-slider .cs-overlay-text{position:absolute;inset:24px;z-index:1;display:inline-flex;flex-direction:column;justify-content:space-between;}
 .cs-content-wrap{display:flex;flex-direction:column;height:100%;justify-content:space-between;gap:40px;padding-left:20px;}
 .main-case-slider .cs-category{text-transform:uppercase;color:#7F8081;font-size:14px;letter-spacing:1.2px;}
@@ -541,7 +541,9 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .sf-why-card.sf-privacy-card .p_font_color,
 .sf-why-card.sf-aest-card .p_font_color,
 .otr-cdu-sec .ort-loc-wp .ort-loc-info p,
-.otr-cdu-sec .p_font_color
+.otr-cdu-sec .p_font_color,
+.industry-serve .section_heading p,
+.industry-sl-main .industry-slide .indus-slide-disc
 {color:#848181;}
 
 .sf-why-card.sf-privacy-card .sf-privcy-img{overflow:hidden;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px;-o-border-radius:16px;}
@@ -798,7 +800,7 @@ ul.work-d-text-points li{font-size:30px;}
 	.outcomes-sec .stats-text{font-size:16px;font-weight:600;color:#111111;}
 	.stats-detail{margin:0 0 auto 0;}
 	.graph-imgs img{width:100%;height:100%;object-fit:cover;}
-
+	.outcomes-sec .case-image-wrap img {border-radius: 20px;}
 	/* engagement-sec */
 	.engagement-sec{padding:100px 0;overflow:hidden;}
 

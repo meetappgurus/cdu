@@ -28,6 +28,9 @@
 .header-main .header-inner-main .header-inner .header-menu ul li:hover a {
     color: #fcbc14;
 }
+.header-main .header-inner-main .header-inner .header-menu ul li.active a{
+    color: #fcbc14;
+}
 .app-link-main{display:flex;align-items:center;}
 .app-link-main .app-img-wp{padding:0px!important;width:110px;height:38px;}
 .app-link-main .app-img-wp img{max-width:100%;}
