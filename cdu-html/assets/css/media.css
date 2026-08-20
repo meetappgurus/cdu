@@ -84,16 +84,6 @@
 		margin-right: 70px;
 	}
 
-	.sr-platforms-grid .sr-platform-icon-main {
-		margin-bottom: 20px;
-		width: 55px;
-		height: 55px;
-	}
-
-	.sr-platforms-grid {
-		gap: 50px;
-	}
-
 	.sr-platforms-wrap .row {
 		padding: 50px 0;
 	}
@@ -614,8 +604,8 @@
 	}
 
 	/* @madhavi */
-	.sr-platforms-grid {
-		gap: 30px;
+	.case-image-wrap img {
+		border-radius: 12px;
 	}
 
 	.sr-benifits-box .btn {
@@ -633,10 +623,17 @@
 		margin-right: 40px;
 	}
 
+	.sr-platforms-grid {
+		gap: 30px;
+	}
+
 	.sr-platforms-grid .sr-platform-icon-main {
-		margin-bottom: 14px;
-		width: 50px;
-		height: 50px;
+		width: 45px;
+		height: 45px;
+	}
+
+	.sr-platforms-grid .sr-platform-item .sr-platform-text {
+		padding-left: 15px;
 	}
 
 	.sr-detail-platforms .sr-platform-disc {
@@ -1061,6 +1058,7 @@
 }
 
 @media (min-width: 1200px) {
+
 	.services-tabs-wrap .service-tab:hover,
 	.services-tabs-wrap .service-tab.active {
 		background: #FBEFD9;
@@ -2086,10 +2084,6 @@
 		margin-bottom: 0;
 	}
 
-	.sr-platforms-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
 	.sf-why-section .sf-stats h4 {
 		font-size: 20px;
 	}
@@ -2305,6 +2299,11 @@
 	}
 
 	/* @madhavi */
+	.sr-platforms-grid {
+		grid-template-columns: 1fr;
+		gap: 26px;
+	}
+
 	.sr-platforms-wrap .row {
 		padding: 30px 0;
 	}
@@ -3041,9 +3040,13 @@
 		font-size: 14px;
 	}
 
+	.sr-platforms-grid .sr-platform-item .sr-platform-text {
+		padding-left: 12px;
+	}
+
 	.sr-platforms-grid .sr-platform-icon-main {
-		width: 40px;
-		height: 40px;
+		width: 35px;
+		height: 35px;
 	}
 
 	.sr-platforms-grid h5 {
@@ -3150,7 +3153,7 @@
 	}
 
 	.sr-platforms-grid {
-		grid-template-columns: 1fr;
+		gap: 20px;
 	}
 }
 

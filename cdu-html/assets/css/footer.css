@@ -119,7 +119,9 @@ ul.f-menu li{margin:10px 0px;}
 .f-icontext-main .f-icontext{margin-right:12px;margin-bottom:15px;background:rgba(255,255,255,0.3);padding:12px 10px;border-radius:15px;border:1px solid #dddddd;line-height:1;font-size: 13px;}
 .f-icontext-main .f-icontext svg{margin-right:10px;}
 .contact_us_text_row .contact_us_text_col{padding:16px 0px;border-bottom:1px solid rgba(221,221,221,0.2);}
-.contact_us_text_row .contact_us_text_col p{margin-bottom:0px;}
+.contact_us_text_row .contact_us_text_col p{margin-bottom:0px;color: #848181;}
+.contact_us_sec .contact_us_sec_left p{color: #848181;}
+.contact_us_sec .footer-speak-team.banner-speak-team p{color: #ffffff80;}
 .contact_us_text_row .contact_us_text_col:last-child{border-bottom:none;}
 .contact_mail_main{margin:40px 0px;}
 .contact_mail_main .contact_mail{width:100%;text-align:center;color:#000;background:#ffff;padding:15px;border-radius:35px;font-size:clamp(14px,1.5vw,1.4rem);font-weight:500;}
