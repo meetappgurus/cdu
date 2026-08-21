@@ -830,9 +830,11 @@ if (window.matchMedia("(min-width: 1200px)").matches) {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: wrapper,
+                autoAlpha: 1,
                 start: "top top",
                 end: () => "+=" + (panels.length * window.innerHeight),
                 pin: true,
+                pinSpacing: true,
                 scrub: 1,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
