@@ -5,7 +5,7 @@
 .sales-manager-details{max-width:600px;display:flex;flex-direction:column;justify-content:space-between;height:100%;}
 .contact_us_form-title h2{  /*font-size: 68px; line-height: 86px;*/
 margin-bottom:40px;font-size:clamp(1.5rem,2.5vw,2.5rem);}
-.contact_us_form_main{background:#fff;padding:40px 30px;border-radius:clamp(15px,2.5vw,24px);}
+.contact_us_form_main{background:#fff;padding:40px 30px;border-radius:clamp(15px,2.5vw,24px);height:100%;}
 .sm-details-bottom{display:flex;justify-content:space-between;}
 .sm-details-bottom .sm-details-info{align-self:end;padding-bottom:80px;width:50%;}
 .sm-details-info span.sm-name{display:inline-block;width:100%;font-size:24px;font-weight:600;text-transform:uppercase;}
@@ -118,7 +118,7 @@ ul.f-menu li{margin:10px 0px;}
 .cf-storefront-form .cf-input{background:rgba(39,39,39,0.1);border:none;padding:15px 30px;height:65px;line-height:1.5;color:rgba(11,12,14,1);border-radius:20px;font-size:16px;-webkit-appearance:none;font-family:'Geist',sans-serif;font-weight:normal;}
 .cf-storefront-form .cf-input:focus{box-shadow:0 0 0 2px color-mix(in srgb,var(--cf-btn-bg,#000) 15%,transparent);background:rgba(39,39,39,0.1);}
 .cf-storefront-form .cf-input:hover{background:rgba(39,39,39,0.1);}
-.cf-storefront-form .cf-submit-btn{background:#FCBC14;border-radius:45px;min-width:unset;width:100%;min-height:64px;padding:10px;color:#000;border:none;font-size:18px;font-weight:500;text-transform:uppercase;transition:all .4s ease-in-out 0s;-webkit-transition:all .4s ease-in-out 0s;-moz-transition:all .4s ease-in-out 0s;-ms-transition:all .4s ease-in-out 0s;-o-transition:all .4s ease-in-out 0s;}
+.cf-storefront-form .cf-submit-btn{font-family: Geist,sans-serif !important; background:#FCBC14;border-radius:45px;min-width:unset;width:100%;min-height:64px;padding:10px;color:#000;border:none;font-size:18px;font-weight:500;text-transform:uppercase;transition:all .4s ease-in-out 0s;-webkit-transition:all .4s ease-in-out 0s;-moz-transition:all .4s ease-in-out 0s;-ms-transition:all .4s ease-in-out 0s;-o-transition:all .4s ease-in-out 0s;}
 .cf-storefront-form .cf-submit-btn:hover{background:#000;color:#fff;}
 .cf-storefront-form .form-bottom-text{font-size:16px;line-height:1.4;color:#000;}
 @media (max-width:1699.98px){
@@ -228,7 +228,7 @@ ul.f-menu li{margin:10px 0px;}
   .footer-bottom-right ul{gap:25px;}
   .form-bottom-text{font-size:12px;}
   .contact_us_form .form-group .form-control,.cf-storefront-form .cf-input{padding:12px 15px;height:50px;border-radius:10px;font-size:14px;}
-  .form-send-btn .btn,.cf-storefront-form .cf-submit-btn{font-size:13px;padding:17px 45px 17px 15px;border-radius:12px;}
+  .form-send-btn .btn{font-size:13px;padding:17px 45px 17px 15px;border-radius:12px;}
   .copy-right-text{text-align:center;margin-top:20px;}
   .f-icontext-main{margin-bottom:30px;}
 }
@@ -262,6 +262,7 @@ ul.f-menu li{margin:10px 0px;}
   .mobile_line{display:none;}
 }
 @media (max-width:767.98px){
+  .cf-storefront-form .cf-success-msg{padding:12px 16px;font-size:13px;}
   .contact_us_form_main{padding:30px 16px;}
   .contact_us_form .form-group textarea.form-control,.cf-storefront-form textarea.cf-input{height:120px;}
   .cf-storefront-form .cf-input::placeholder,.contact_us_form .form-control::placeholder{font-size:14px;}
