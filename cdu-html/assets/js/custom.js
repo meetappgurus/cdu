@@ -261,7 +261,7 @@ $(document).ready(function () {
         arrows: false,
         autoplay: true,
         infinite: true,
-        variableWidth: true,
+        adaptiveHeight: true,
         autoplaySpeed: 2000,
         speed: 500,
         touchThreshold: 500,
