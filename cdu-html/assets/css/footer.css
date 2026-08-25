@@ -121,6 +121,10 @@ ul.f-menu li{margin:10px 0px;}
 .cf-storefront-form .cf-submit-btn{font-family: Geist,sans-serif !important; background:#FCBC14;border-radius:45px;min-width:unset;width:100%;min-height:64px;padding:10px;color:#000;border:none;font-size:18px;font-weight:500;text-transform:uppercase;transition:all .4s ease-in-out 0s;-webkit-transition:all .4s ease-in-out 0s;-moz-transition:all .4s ease-in-out 0s;-ms-transition:all .4s ease-in-out 0s;-o-transition:all .4s ease-in-out 0s;}
 .cf-storefront-form .cf-submit-btn:hover{background:#000;color:#fff;}
 .cf-storefront-form .form-bottom-text{font-size:16px;line-height:1.4;color:#000;}
+.cf-storefront-form .cf-form-desc{order: 2;position: relative; margin: 16px 0 24px 0; padding: 0 0 0 22px; color: #000;}
+.cf-storefront-form .cf-form-desc::before{content:"";display:inline-block;width:16px;height:16px;vertical-align:middle;background:url("https://cdn.shopify.com/s/files/1/0786/1472/4748/files/lock.svg?v=1787648963") no-repeat center;background-size:contain;position:absolute;left:0;top:4px;}
+
+
 @media (max-width:1699.98px){
   .inquiry_title h3{font-size:26px;}
   .inquiry_main{padding:20px;}

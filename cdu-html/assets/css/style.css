@@ -242,7 +242,8 @@ ul.contact-shq .cm-icon svg{max-width:100%;}
 .ani-middle-heading .sec_title.left{text-align:end;}
 .ani-middle-heading .sec_title.right{text-align:start;}
 .ani-card-wrap .card_col{width:440px;padding:10px;border-radius:16px;-webkit-border-radius:16px;-moz-border-radius:16px;-ms-border-radius:16px;-o-border-radius:16px;background-color:rgba(255,255,255,0.2);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);overflow:hidden;}
-.ani-card{padding:24px;border:1px solid rgba(5,8,12,0.1);border-radius:14px;-webkit-border-radius:14px;-moz-border-radius:14px;-ms-border-radius:14px;-o-border-radius:14px;display:flex;flex-direction:column;gap:50px;min-height:500px;}
+.ani-card-wrap .card_col:hover .ani-card{border-color:#ddd;box-shadow: inset 0px 0px 10px 0px #c6c6c6;}
+.ani-card{padding:24px;border:1px solid rgba(5,8,12,0.1);border-radius:14px;-webkit-border-radius:14px;-moz-border-radius:14px;-ms-border-radius:14px;-o-border-radius:14px;display:flex;flex-direction:column;gap:50px;min-height:500px;transition: all 0.4s ease;}
 .ani-card-head{display:flex;align-items:center;justify-content:space-between;gap:20px;}
 .ani-card-head .ani-card-title{font-size:26px;font-weight:400;line-height:1.2;color:#fff;}
 .ani-icons-wrap{gap:8px;}
@@ -871,7 +872,14 @@ ul.work-d-text-points li{font-size:30px;}
   .contact-us-form .form-group .form-control,.contact-us-form .cf-storefront-form .cf-input{background:#272727;border:none;padding:15px 20px;color:#fff;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;}
   .contact_us_bottom .form-send-btn .btn{background:#272727;border-radius:10px;min-width:200px;min-height:55px;color:#FFFFFF;padding:18px 67px 19px 30px!important;width:auto!important;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;}
   .contact-us-form .cf-submit-btn:hover{background:#272727!important;}
-  .contact_us_form .cf-field-wrap{margin-bottom:20px;}
+  .contact-us-form .cf-field-wrap{margin-bottom:20px;}
+  .contact-us-form .cf-storefront-form .cf-form-desc{color: #fff;}
+  .contact-us-form .cf-storefront-form .cf-form-desc:before{ filter: invert(1);}
+  .contact-us-form .cf-storefront-form .cf-form-inner{display: flex; flex-direction: column;}
+  .contact-us-form .cf-storefront-form .cf-form-page{order: 1;}
+  .contact-us-form .cf-storefront-form .cf-submit-wrap{order: 3;}
+
+
   ul.contact-us-link{margin:10px 0px 48px;gap:12px;display:flex;flex-direction:column;}
   ul.contact-us-link li{display:flex;align-items:center;gap:12px;}
   ul.contact-us-link li .call-mail-icon{width:30px;height:30px;}
