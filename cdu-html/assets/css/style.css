@@ -1138,7 +1138,7 @@ ul.work-d-text-points li{font-size:30px;}
   .sitemap-group:last-child {margin-bottom: 0px;}
   
   /*.sitemap-group + .sitemap-group{margin-top:22px;}*/
-  .sitemap-link svg{width:16px;height:16px;}
+  .sitemap-link svg{width:14px;height:14px;}
   .sitemap-links{list-style:none;margin:0;padding:0;}
   .sitemap-links li{margin-bottom:10px;}
   .sitemap-link{display:inline-flex;align-items:center;gap:8px;font-size:18px;color:#101114;text-decoration:none;transition:color .15s ease,gap .15s ease;}
@@ -1199,7 +1199,7 @@ ul.work-d-text-points li{font-size:30px;}
     .sitemap-links{margin:0 0 30px;}
     .seprate{margin:40px 0;}
     .sitemap-groups{--bs-gutter-x:18px;row-gap:0px;}
-    .sitemap-link svg{width:14px;height:14px;}
+    
   }
   @media (max-width:575px){
     .glossary-row .glossary-col{width:100%;}
