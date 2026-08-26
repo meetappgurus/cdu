@@ -460,6 +460,7 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .expl-services-card{height:100%;overflow:hidden;display:flex;flex-direction:column;border:1px solid #ddd;border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;}
 .explore-services-list{display:flex;gap:30px;overflow:hidden;}
 .expl-services-card .expl-services-info{padding:16px;flex-grow:1;display:flex;flex-direction:column;justify-content:space-between;background-color:#fff;}
+.expl-services-card .expl-services-info .tech-stack span{text-transform: uppercase;}
 .expl-services-card .expl-services-info .tech-stack span,.expl-services-card .expl-services-info .tech-stack .sr-re-label{color:#FCBC14;background-color:rgba(252,188,20,10%);border-color:transparent;}
 .expl-services-card .service-disc-wrap{border:none;padding:0;border-radius:0;margin:12px 0!important;display:flex;gap:0;background-color:transparent;}
 .expl-services-card .service-disc-wrap .ts-platform-left{max-width:calc(100% - 138px);padding-right:18px;}
