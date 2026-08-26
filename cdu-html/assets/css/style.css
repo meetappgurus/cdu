@@ -599,7 +599,7 @@ ul.case--study-type-inner li a{padding:7px 17px;border-radius:25px;color:#0B0C0E
 .modal-img-main .cs-model-bottom h4{margin-bottom:40px;font-size:30px;}
 
 /* Work Details */
-.case-study-icon{box-shadow:0 0 30px rgba(0,0,0,.25);border-radius:15px;}
+.case-study-icon{border-radius:15px; max-width: 160px;}
 .work-details-img-sec{background:#f4f4f4;overflow:hidden;}
 .work-details-img-sec .work-details-img img{max-width:100%;width:100%;}
 .work-d-ss-text-sec .work-d-ss-text-wrap{max-width:1300px;margin:0 auto;}
@@ -1220,7 +1220,7 @@ ul.work-d-text-points li{font-size:30px;}
   .blog-sec-main .blog-left{width:calc(72% - 60px);display:flex;gap:30px;}
   .blog-sec-main .blog-left .blog-left-col{width:calc(50% - 15px);}
   .blog-sec-main .blog-right{width:28%;}
-  .blog-left-col .blog-left-img{margin-bottom:30px;height:429px;}
+  .blog-left-col .blog-left-img{margin-bottom:30px;height:250px;}
   .blog-left-img .blog-img-link{width:100%;display:inline-block;height:100%;}
   .blog-left-img .blog-img-link img{width:100%;max-width:100%;border-radius:15px;height:100%;object-fit:cover;}
   .blog-left-date span{display:inline-block;font-size:14px;color:#000;}
@@ -1329,7 +1329,6 @@ ul.work-d-text-points li{font-size:30px;}
     .blog--col .blog--title h4{font-size:18px}
     .blog--date{margin-bottom:15px}
     .blog--col .blog--img{margin-bottom:20px;height:200px}
-    .blog-left-col .blog-left-img{height:400px}
     .letest-blog-main .letest-blog-row{padding-bottom:15px;margin-bottom:15px}
   }
   @media (max-width:1599px){
@@ -1350,7 +1349,6 @@ ul.work-d-text-points li{font-size:30px;}
     ul.blog-categories li a{font-size:16px}
     .blog-page-sec h3.blog-sub-title{margin-bottom:30px}
     .blog-page-lists .blog-page-latest-blogs{margin-bottom:40px}
-    .blog-left-col .blog-left-img{height:345px}
   }
   @media (max-width:1499px){
     .blog-details-main p{margin:5px 0 20px;}
@@ -1366,12 +1364,10 @@ ul.work-d-text-points li{font-size:30px;}
     .blog-left-date{margin-bottom:14px}
     .letest-blog-main .letest-blog-row{padding-bottom:15px;margin-bottom:15px}
     .see-more-blogs .blog--col .blog--img{height:250px}
-    .blog-left-col .blog-left-img{height:300px}
   }
   @media (max-width:1399px){
     .see-more-blogs .blog--col .blog--img{height:220px}
     .letest-blog-main .letest-blog-row{padding-bottom:10px;margin-bottom:10px}
-    .blog-left-col .blog-left-img{height:270px}
   }
   @media (max-width:1299px){
     .blog--col .blog--img{height:150px}
