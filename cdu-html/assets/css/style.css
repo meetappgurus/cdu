@@ -262,6 +262,9 @@ ul.contact-shq .cm-icon svg{max-width:100%;}
 .p_font_color{color:#4f4f4f;}
 .sec_typo{color:#0B0C0E;font-size:clamp(1.5rem,2.5vw,2.5rem);}
 .sep-devider{border-color:#DDDDDD;margin:30px 0;opacity:1;}
+
+.case-studies{position: relative;}
+
 .case-studies .case-disc{font-size:18px;font-weight:300;margin-left:auto;max-width:64%;}
 .case-studies .sec_subtitle{color:#0B0C0E;}
 .main-case-slider .badge-platform{display:inline-block;background-color:rgba(171,171,171,0.6);backdrop-filter:blur(10px);font-size:14px;letter-spacing:1.2px;text-transform:uppercase;border-radius:50px;-webkit-border-radius:50px;-moz-border-radius:50px;-ms-border-radius:50px;-o-border-radius:50px;overflow:hidden;padding:10px 18px;}
