@@ -580,6 +580,7 @@ ul.slick-dots .slick-active button{width:22px;background-color:#FCBC14;}
 .portfolio-grid{display:flex;flex-wrap:wrap;gap:15px;}
 .portfolio-grid-item{position:relative;}
 .portfolio-grid.col-one .portfolio-grid-item{width:100%;}
+.portfolio-grid.col-one .portfolio-grid-item:first-child .portfolio-logo .portfolio-logo-img{max-height: 100px;}
 .portfolio-grid-item .portfolio-img{max-width:100%;width:100%;}
 .portfolio-grid-item .portfolio-item-info{position:absolute;  /* z-index: 1; */top:5%;left:0;right:0;max-width:1640px;width:87%;margin:auto;padding:15px;}
 .portfolio-info-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:40px;}
@@ -943,7 +944,7 @@ ul.work-d-text-points li{font-size:30px;}
   .about-banner-sec .banner-wrap{padding:100px 0px 40px;}
   .banner-links-main ul{display:flex;gap:9px;margin-bottom:15px;}
   .banner-links-main ul li.banner-links{font-size:20px;line-height:normal;color:#000000;}
-  .banner-links-main ul li.banner-links a{color:#000;font-weight:500;}
+  .banner-links-main ul li.banner-links a{color:#000;font-weight:500;white-space: nowrap;}
   .banner-links-main ul li.banner-links.active a{font-weight:700;}
   .banner-links-main ul li.banner-links a:hover{text-decoration:underline;}
   .banner-links-main ul li.banner-links.active .link-title{font-weight:600;}
