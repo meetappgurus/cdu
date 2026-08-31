@@ -219,7 +219,7 @@ ul.dropdown-ulmenu li a:before{content:'';width:15px;height:22px;display:inline-
 	.header-btn-main .btn.btn-with-arrow{font-size:14px;padding:15px 44px 15px 15px;}
 	.header-btn-main .btn.btn-with-arrow:after{width:35px;height:35px;right:5px;}
 	.header-main .header-inner-main .header-menu-inner .header-btn-main{gap:10px;}
-	.header-btn-main .btn:before{left:-43px;}
+	.header-btn-main .btn:before{left:-46px;}
 	.header-logo svg{max-width:85px;}
 	.header-main .header-inner-main .header-inner{width:calc(100% - 85px);}
 	.header-main .sm_menu_main .sdropdown-wp{left:-25px;right:-15px;}
@@ -261,7 +261,6 @@ ul.dropdown-ulmenu li a:before{content:'';width:15px;height:22px;display:inline-
 	.header-btn-main .btn.btn-with-arrow:after{width:25px;height:25px;right:5px;background-size:15px;}
 	.header-main .header-inner-main .header-menu-inner{gap:10px;}
 	.header-main .header-inner-main .header-inner{padding-left:25px;}
-	.header-btn-main .btn:before{left:-31px;}
 	.header-main .header-inner-main .header-inner .header-menu ul.dropdown-ulmenu li a{font-size:13px;}
 	.sdropdown-header .sdropdown-text{font-size:16px;}
 	.services-sub-menu .ssm-txt{font-size:14px;}

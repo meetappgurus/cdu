@@ -1,6 +1,6 @@
 /* Media Query of @madhavi */
 @media (max-width:1600px){
-	.portfolio-grid.col-one .portfolio-grid-item:first-child .portfolio-logo .portfolio-logo-img{max-height:70px;}
+	.portfolio-grid.col-one .portfolio-grid-item:first-child .portfolio-logo .portfolio-logo-img {max-height: 70px;}
 	.hwd-sticky-sl-wrap{padding:50px 0 80px;}
 	.how-we-deliver .consultant-cta{padding:16px 20px;}
 	.how-we-deliver .consultant-cta .consultant-avatar{width:60px;height:60px;}
@@ -244,7 +244,7 @@
 	.work-d-info-row ul li{padding-left:25px;font-size:20px;}
 	.work-d-info-row ul li:before{top:10px;left:0px;}
 	.work-features-slider .work-features-slide .work-features-box{padding:30px 30px;}
-	.work-features-slider .work-features-box .work-features-img,.work-features-slider .work-features-box .work-features-img img{max-height:55vh;}
+	.work-features-slider .work-features-box .work-features-img, .work-features-slider .work-features-box .work-features-img img{max-height:55vh;}
 	.work-features-slider .work-features-text p{font-size:16px;}
 }
 @media (min-width:1200px){
@@ -290,7 +290,8 @@
 	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-header{background-color:#fff;padding:16px 48px 16px 16px;display:flex;align-items:start;text-align:start;position:relative;cursor:pointer;border:none;width:100%;}
 	.hwd-sticky-sl-wrap .hwd-title{font-size:20px;}
 	.hwd-sticky-sl-wrap .step-number{font-size:15px;color:#666666;}
-	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-header::after{position:absolute;content:"";background-image:url(../images/cdu-assets/down-arrow.svg);background-size:100%;background-repeat:no-repeat;background-position:center;right:16px;width:16px;height:16px;}
+	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-header::after{position:absolute;content:"";right:16px;width:16px;height:16px;}
+	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-header.active::after{ transform:scale(-1) ; -webkit-transform:scale(-1) ; -moz-transform:scale(-1) ; -ms-transform:scale(-1) ; -o-transform:scale(-1) ; }
 	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease;-webkit-transition:max-height 0.4s ease;-moz-transition:max-height 0.4s ease;-ms-transition:max-height 0.4s ease;-o-transition:max-height 0.4s ease;}
 	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-content{padding:16px;}
 	.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-content p{margin-bottom:0;}
@@ -417,7 +418,7 @@
 	.trusted-companies-top{padding-top:20px;}
 
 	/* @madhavi */
-	.portfolio-grid.col-one .portfolio-grid-item:first-child .portfolio-logo .portfolio-logo-img{max-height:60px;}
+	.portfolio-grid.col-one .portfolio-grid-item:first-child .portfolio-logo .portfolio-logo-img {max-height: 60px;}
 	.case-studies,.industry-serve,.our-methodology,.our-capabilities,.client-testimonials,.blogs-sec,.sec-padding{padding:60px 0;}
 	.ani-card-wrap .card_col{width:340px;}
 	.ani-card-image img{max-width:240px;}
@@ -536,6 +537,7 @@
 	.faqs-section .accordion-body{padding:0px 30px 10px 0px;}
 	.faqs-section .accordion-body p{font-size:14px;line-height:1.6;}
 
+	/* @madhavi */
 	.contact-us-page.banner-sec{padding-right:0;padding-left:0;}
 	.contactUs-page-wrap .contact-us-form{padding:30px 30px;}
 	.contact_us_form .cf-field-wrap{margin-bottom:14px;}
@@ -560,7 +562,7 @@
 	.case-studies .case-studies-option .cs-optin-item::after{height:30px;}
 	.case-studies .case-studies-option .cs-optin-item:nth-child(2)::after,.case-studies .case-studies-option .cs-optin-item:nth-child(4)::after{display:none;}
 	.case-studies .case-studies-option .cs-optin-item:nth-child(3)::after{display:block;}
-	/* .case-studies .pagination-wrap{position: static; padding-top:24px;} */
+	/* .case-studies .pagination-wrap{position:static;padding-top:24px;} */
 	.case-studies .pagination-wrap{position: sticky;bottom: 30px;z-index: 20;left: 100%;background: rgba(0,0,0,0.65); -webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);border-radius: 999px;box-shadow: 0 8px 24px rgba(0, 0, 0, .2);padding: 8px 8px;margin: 20px 24px 16px 0;}
 	.case-studies .pagination-wrap .pagination-counter{color: #fff;}
 	.case-studies {overflow: unset;}
@@ -590,6 +592,7 @@
 	.portfolio-btn .btn::after{width:20px;height:20px;right:4px;background-size:10px!important;}
 	ul.case--study-type-inner li a{font-size:6px;}
 	.portfolio-grid.col-two .portfolio-grid-item{width:100%;}
+	.portfolio-grid.col-one{padding: 0 7px;}
 	.modal-img-main .cs-model-bottom{max-width:250px;padding:15px 10px;border-radius:10px;transform:scale(.9);-webkit-transform:scale(.9);-moz-transform:scale(.9);-ms-transform:scale(.9);-o-transform:scale(.9);}
 	.modal-img-main .cs-model-bottom h4{margin-bottom:10px;font-size:14px;}
 	.modal-img-main .cs-model-bottom .btn{font-size:10px;line-height:1;padding:10px 17px 12px;}
@@ -612,7 +615,7 @@
 	.work-features-slider .work-features-slide .work-features-box{padding:25px;border-radius:16px;}
 }
 @media (max-width:576px){
-	.banner-links-main ul li.banner-links{font-size:13px;}
+	.banner-links-main ul li.banner-links {font-size: 13px;}
 	.ltdp-cdu-discuss-bubble.home-ltdp .phn-icon img,.ltdp-cdu-discuss-bubble.home-ltdp .phn-icon{width:46px;height:34px;}
 	.home-ltdp .ltdp-cdu-discuss-avatar>img{width:54px;}
 	.home-ltdp.ltdp-cdu-discuss-bubble:hover .phn-icon{transform:translateX(64px) scale(1);}
@@ -745,18 +748,3 @@
 	.case-studies .case-studies-option{grid-template-columns:1fr;}
 }
 
-/*=========================================================
-iPad Pro devices (portrait phones, less than 1021px)
-===========================================================*/
-
-/* ----------- iPad Pro ----------- */
-@media only screen and (min-device-width:768px) and (max-device-width:1024px){
-}
-
-/* Landscape*/
-@media only screen and (min-device-width:1024px) and (max-device-width:1366px) and (-webkit-min-device-pixel-ratio:2) and (orientation:landscape){
-}
-
-/* Portrait*/
-@media only screen and (min-device-width:1024px) and (max-device-width:1366px) and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){
-}

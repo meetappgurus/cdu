@@ -13,11 +13,16 @@
 
 /*Path CSS End*/
 
-.map-bg::after {background-image: url(../images/cdu-assets/map-bg-img.png);}
-
 .contactUs-page-right ul.banner-point li:before {
-    background: url(../images/right-icon-black.svg);
+    background: url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/right-icon-black.svg?v=1786447768');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
+}
+.map-bg::after {background-image: url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/map-bg-img.png?v=1786449706');}
+.hwd-sticky-sl-wrap .custom-accordion .hwd-accord-header::after {
+    background-image: url('https://cdn.shopify.com/s/files/1/0786/1472/4748/files/down-arrow_fd5aabde-ec79-4476-a305-b1f3876a93b9.svg?v=1786687041');
+    background-size: 100%;
+    background-repeat: no-repeat;
     background-position: center;
 }
