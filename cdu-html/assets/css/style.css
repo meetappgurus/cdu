@@ -1333,6 +1333,7 @@ ul.work-d-text-points li{font-size:30px;}
   .blog-details-main ul{list-style:none;padding-left:1.2em;margin-bottom:20px;}
   .wp-block-list li{position:relative;font-size:16px;}
   .blog-details-main li::before{content:"";position:absolute;left:-1em;top:.6em;width:6px;height:6px;background-color:#000;border-radius:50%;}
+  .banner-sec.blog-details-banner .banner-text-wrap{margin-bottom: 0;}
   @media (max-width:1699px){
     ul.blog-categories li a{font-size:18px}
     .blog--col .blog--title h4{font-size:18px}
