@@ -948,7 +948,11 @@ ul.work-d-text-points li{font-size:30px;}
   .about-banner-sec .banner-wrap{padding:100px 0px 40px;}
   .banner-links-main ul{display:flex;gap:9px;margin-bottom:15px;}
   .banner-links-main ul li.banner-links{font-size:20px;line-height:normal;color:#000000;}
-  .banner-links-main ul li.banner-links a{color:#000;font-weight:500;white-space: nowrap;}
+  .banner-links-main ul li.banner-links a{color:#000;font-weight:500;}
+
+  .banner-links-main ul li.banner-links:not(:last-child) a {white-space: nowrap;}
+  .banner-links-main ul li.banner-links a {white-space: unset;}
+
   .banner-links-main ul li.banner-links.active a{font-weight:700;}
   .banner-links-main ul li.banner-links a:hover{text-decoration:underline;}
   .banner-links-main ul li.banner-links.active .link-title{font-weight:600;}
