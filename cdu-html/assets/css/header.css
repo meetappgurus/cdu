@@ -154,6 +154,7 @@ ul.dropdown-ulmenu li a:before{content:'';width:15px;height:22px;display:inline-
 	.header-main .ssm-img-col img{height:auto;min-height:320px;min-width:320px;width:100%;object-fit:cover;}
 	.sdropdown-slider{width:320px;height:320px;overflow:hidden;border: 1px solid #DDDDDD;border-radius: 15px;}
 	.sdropdown-testimonial-img .sdropdown-uimg{object-fit:cover;}
+	
 
 	/*.header-main .sm_menu_main .sdropdown-wp .sdropdown-main:after{content:'';position:absolute;width:0;height:0;border-left:25px solid transparent;border-right:25px solid transparent;border-bottom:0px solid #F8CE5A;bottom:100%;left:15px; transition: all 100ms ease;}*/
 
@@ -283,7 +284,7 @@ ul.dropdown-ulmenu li a:before{content:'';width:15px;height:22px;display:inline-
 	.header-menu .hedear-call-us li button.btn:after{display:none;}
 	.header-main .header-inner-main .header-menu-inner .header-btn-main{justify-content:center;display:flex;flex-wrap:wrap;align-items:flex-start;padding:12px;flex-direction:column-reverse;width:100%;}
 	.header-main .header-inner-main .header-inner .header-menu .header-menu-inner{position:fixed;top:0px;left:0px;right:0px;background:#000;z-index:777;height:0;overflow:auto;transition:all 400ms ease;		/* transform: translateX(-100%); */visibility:hidden;opacity:0;padding-bottom:5vh;width:100%;max-width:91%;margin:auto;border-top-right-radius:15px;border-top-left-radius:15px;border-radius:15px;box-shadow:1px 8px 16px rgba(0,0,0,0.7);}
-	.header-main .header-inner-main .header-inner .header-menu.show .header-menu-inner{transform:translateX(0);visibility:visible;opacity:1;height:calc(93vh - 85px);top:75px;}
+	.header-main .header-inner-main .header-inner .header-menu.show .header-menu-inner{transform:translateX(0);visibility:visible;opacity:1;height:calc(93dvh - 85px);top:75px;}
 	.header-main .header-inner-main .header-inner .header-menu ul li a{margin:0;padding:4px 10px;width:auto;color:#fff;font-size:24px;}
 	.header-main .header-right{margin-right:0px;text-align:right;}
 	.header-main .navbar-container{padding:14px 0px;}

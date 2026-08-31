@@ -136,7 +136,8 @@ textarea.form-control{resize:none;overflow:auto;padding:15px 15px 15px 0px;heigh
 .text-capitalize{text-transform:capitalize!important;}
 .text-uppercase{text-transform:uppercase!important;}
 .display-none{display:none!important;}
-.no-scroll{overflow:hidden;}
+html.no-scroll,
+body.no-scroll {overflow:hidden !important;}
 .no-padding{padding:0!important;}
 .float-start-wp{float:left!important;}
 

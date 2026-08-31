@@ -11,11 +11,11 @@ $(document).ready(function () {
     });
 
     $(".navbar-toggler").click(function () {
-        $("body").toggleClass("no-scroll");
+        $("html, body").toggleClass("no-scroll");
     });
 
     $(".header-menu a").click(function () {
-        $("body").removeClass("no-scroll");
+        $("html, body").removeClass("no-scroll");
     });
 
     $('.header-btn-main a').on('click', function () {
@@ -25,33 +25,64 @@ $(document).ready(function () {
 
 
     // Header sticky when scroll down
-    $(function () {
-        // Disable header scroll JS only on service.html
-        if ($('.services-tabs-sticky').length) {
-            return;
+   $(function () {
+        // Header sticky
+        if (!$('.services-tabs-sticky').length) {
+
+            var scroll = $(document).scrollTop();
+            var navHeight = $('.header-main').outerHeight();
+
+            $(window).scroll(function () {
+                var scrolled = $(document).scrollTop();
+
+                if (scrolled > navHeight) {
+                    $('.header-main').addClass('active');
+                } else {
+                    $('.header-main').removeClass('active');
+                }
+
+                if (scrolled > scroll) {
+                    $('.header-main').removeClass('sticky');
+                } else {
+                    $('.header-main').addClass('sticky');
+                }
+
+                scroll = scrolled;
+            });
         }
+        // Services tabs drag
+        var $tabsWrap = $('.services-tabs-wrap');
 
-        var scroll = $(document).scrollTop();
-        var navHeight = $('.header-main').outerHeight();
-        var scrollThreshold = 100;
+        if ($tabsWrap.length) {
 
-        $(window).scroll(function () {
-            var scrolled = $(document).scrollTop();
-            if (scrolled > navHeight) {
+            var isDown = false;
+            var startX;
+            var scrollLeft;
 
-                $('.header-main').addClass('active');
-            } else {
-                $('.header-main').removeClass('active');
-            }
+            $tabsWrap.on('mousedown', function (e) {
+                isDown = true;
+                $(this).addClass('dragging');
 
-            if (scrolled > scroll) {
-                $('.header-main').removeClass('sticky');
-            } else {
-                $('.header-main').addClass('sticky');
-            }
+                startX = e.pageX - this.offsetLeft;
+                scrollLeft = this.scrollLeft;
+            });
 
-            scroll = $(document).scrollTop();
-        });
+            $tabsWrap.on('mouseup mouseleave', function () {
+                isDown = false;
+                $(this).removeClass('dragging');
+            });
+
+            $tabsWrap.on('mousemove', function (e) {
+                if (!isDown) return;
+
+                e.preventDefault();
+
+                var x = e.pageX - this.offsetLeft;
+                var walk = (x - startX) * 1.5;
+
+                this.scrollLeft = scrollLeft - walk;
+            });
+        }
     });
 
     // ==================================================================
