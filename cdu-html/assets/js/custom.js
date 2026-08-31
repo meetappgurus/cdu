@@ -25,65 +25,35 @@ $(document).ready(function () {
 
 
     // Header sticky when scroll down
-   $(function () {
-        // Header sticky
-        if (!$('.services-tabs-sticky').length) {
-
-            var scroll = $(document).scrollTop();
-            var navHeight = $('.header-main').outerHeight();
-
-            $(window).scroll(function () {
-                var scrolled = $(document).scrollTop();
-
-                if (scrolled > navHeight) {
-                    $('.header-main').addClass('active');
-                } else {
-                    $('.header-main').removeClass('active');
-                }
-
-                if (scrolled > scroll) {
-                    $('.header-main').removeClass('sticky');
-                } else {
-                    $('.header-main').addClass('sticky');
-                }
-
-                scroll = scrolled;
-            });
+    $(function () {
+        // Disable header scroll JS only on service.html
+        if ($('.services-tabs-sticky').length) {
+            return;
         }
-        // Services tabs drag
-        var $tabsWrap = $('.services-tabs-wrap');
 
-        if ($tabsWrap.length) {
+        var scroll = $(document).scrollTop();
+        var navHeight = $('.header-main').outerHeight();
+        var scrollThreshold = 100;
 
-            var isDown = false;
-            var startX;
-            var scrollLeft;
+        $(window).scroll(function () {
+            var scrolled = $(document).scrollTop();
+            if (scrolled > navHeight) {
 
-            $tabsWrap.on('mousedown', function (e) {
-                isDown = true;
-                $(this).addClass('dragging');
+                $('.header-main').addClass('active');
+            } else {
+                $('.header-main').removeClass('active');
+            }
 
-                startX = e.pageX - this.offsetLeft;
-                scrollLeft = this.scrollLeft;
-            });
+            if (scrolled > scroll) {
+                $('.header-main').removeClass('sticky');
+            } else {
+                $('.header-main').addClass('sticky');
+            }
 
-            $tabsWrap.on('mouseup mouseleave', function () {
-                isDown = false;
-                $(this).removeClass('dragging');
-            });
-
-            $tabsWrap.on('mousemove', function (e) {
-                if (!isDown) return;
-
-                e.preventDefault();
-
-                var x = e.pageX - this.offsetLeft;
-                var walk = (x - startX) * 1.5;
-
-                this.scrollLeft = scrollLeft - walk;
-            });
-        }
+            scroll = $(document).scrollTop();
+        });
     });
+
 
     // ==================================================================
     //                    Header JS END
@@ -501,8 +471,63 @@ $(document).ready(function () {
                 }
             });
         });
-    }
 
+        // Drag to scroll on .services-tabs-wrap
+        (function () {
+
+            const $wrap = $('.services-tabs-wrap');
+            if (!$wrap.length) return;
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            $wrap.on('mousedown', function (e) {
+
+                isDown = true;
+                $wrap.addClass('active');
+
+                // Prevent text/element selection on drag start
+                e.preventDefault();
+
+                startX = e.pageX - $wrap.offset().left;
+                scrollLeft = $wrap.scrollLeft();
+            });
+
+            $wrap.on('mousemove', function (e) {
+
+                if (!isDown) return;
+                e.preventDefault();
+
+                const x = e.pageX - $wrap.offset().left;
+                const walk = (x - startX);
+
+                if (Math.abs(walk) > 5) {
+                    $wrap.attr('data-dragging', 'true');
+                }
+
+                $wrap.scrollLeft(scrollLeft - walk);
+            });
+
+            $wrap.on('mouseup', function () {
+
+                isDown = false;
+                $wrap.removeClass('active');
+
+                setTimeout(function () {
+                    $wrap.removeAttr('data-dragging');
+                }, 0);
+            });
+
+            $wrap.on('mouseleave', function () {
+
+                isDown = false;
+                $wrap.removeClass('active');
+                $wrap.removeAttr('data-dragging');
+            });
+
+        })();
+    }
     // end
 
     // Services slider For Responsive
@@ -649,7 +674,7 @@ $(document).ready(function () {
         ScrollTrigger.refresh();
     }
 
-});
+    });
 
 
 // ==================================================================
