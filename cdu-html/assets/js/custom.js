@@ -350,6 +350,103 @@ $(document).ready(function () {
         }]
     });
 
+    // ============================================
+    // Leading Team Slider JS - START
+    // Scoped only to .leading-team-sec
+    // ============================================
+        // $('.leading-team-swiper').slick({
+        //     dots: true,
+        //     arrows: false,
+        //     autoplay: false,
+        //     autoplaySpeed: 2000,
+        //     touchThreshold: 100,
+        //     infinite: true,
+        //     slidesToShow: 4,
+        //     slidesToScroll: 1,
+        //     // speed: 2000,
+
+        //     responsive: [{
+        //         breakpoint: 1400,
+        //         settings: {
+        //             autoplay: false,
+        //             autoplaySpeed: 2000,
+        //             slidesToShow: 4,
+        //             infinite: true,
+        //             dots: true
+        //         }
+        //     }, {
+        //         breakpoint: 1200,
+        //         settings: {
+        //             slidesToShow: 3,
+        //         }
+        //     }, {
+        //         breakpoint: 991,
+        //         settings: {
+        //             slidesToShow: 2,
+        //         }
+        //     }, {
+        //         breakpoint: 480,
+        //         settings: {
+        //             slidesToShow: 1,
+        //         }
+        //     }]
+        // });
+
+
+
+        $('.leading-team-swiper').slick({
+        dots: true,
+        arrows: false,          // using custom arrows instead
+        autoplay: false,
+        autoplaySpeed: 2000,
+        touchThreshold: 100,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        swipe: true,
+        draggable: true,
+        swipeToSlide: true,
+        touchMove: true,
+
+        responsive: [{
+            breakpoint: 1400,
+            settings: {
+                autoplay: false,
+                autoplaySpeed: 2000,
+                slidesToShow: 4,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        }, {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }]
+    });
+
+    // Custom prev/next buttons wired to the slick instance
+    $('.leading-team-sec .team-nav-prev').on('click', function () {
+        $('.leading-team-swiper').slick('slickPrev');
+    });
+    $('.leading-team-sec .team-nav-next').on('click', function () {
+        $('.leading-team-swiper').slick('slickNext');
+    });
+    // ============================================
+    // Leading Team Slider JS - END
+    // ============================================
+
+
     // ==================================================================
     //        Categories Select Options JS START
     // ================================================================== 
@@ -383,7 +480,6 @@ $(document).ready(function () {
     // ==================================================================
     //        Categories Select Options JS END
     // ==================================================================  
-
 
     // Services Tabs JS Start
     if ($('.service-tab').length) {
@@ -629,7 +725,7 @@ $(document).ready(function () {
         slidesPerView: 'auto',
         slidesToScroll: 1,
         edgeFriction: 0,
-        swipeToSlide: false,
+        // swipeToSlide: false,
         touchThreshold: 100,
         infinite: false,
         variableWidth: true,
@@ -642,6 +738,8 @@ $(document).ready(function () {
         cssEase: 'ease',
         focusOnSelect: true,
         accessibility: true,
+        swipeToSlide: true,
+        touchMove: true,
         responsive: [
             {
                 breakpoint: 575,
