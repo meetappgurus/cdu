@@ -795,7 +795,11 @@ window.addEventListener("load", () => {
     const endTarget = buildBlock || lastCard;
 
     function getMoveDistance() {
-        return endTarget.offsetTop + endTarget.offsetHeight;
+        const container = section.querySelector(".container");
+        const containerHeight = container ? container.offsetHeight : window.innerHeight;
+        const wrapHeight = cardsWrap.parentElement ? cardsWrap.parentElement.offsetHeight : containerHeight;
+        const extraBottomSpace = Math.max(0, containerHeight - wrapHeight);
+        return Math.max(0, (endTarget.offsetTop + endTarget.offsetHeight) - extraBottomSpace);
     }
 
     const mm = gsap.matchMedia();
@@ -807,7 +811,7 @@ window.addEventListener("load", () => {
                 start: "top top",
                 end: () => "+=" + getMoveDistance(),
                 pin: true,
-                scrub: 1.2,
+                scrub: 1.5,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
                 markers: false
@@ -815,6 +819,8 @@ window.addEventListener("load", () => {
         });
 
         if (headingLeft && headingRight) {
+            const container = headingLeft.closest(".container") || section.querySelector(".container");
+
             const getAnimDistance = () => {
                 const headingRect = headingLeft.getBoundingClientRect();
                 const cardRect = cards[0].getBoundingClientRect();
@@ -823,8 +829,39 @@ window.addEventListener("load", () => {
                 return Math.max(50, dist - safetyMargin);
             };
 
+            const getLeftMoveDistance = () => {
+                if (!container) return headingLeft.offsetWidth;
+                const containerRect = container.getBoundingClientRect();
+                const containerStyle = window.getComputedStyle(container);
+                const paddingLeft = parseFloat(containerStyle.paddingLeft) || 0;
+                const containerLeft = containerRect.left + paddingLeft;
+
+                const currentX = gsap.getProperty(headingLeft, "x") || 0;
+                const headingLeftRect = headingLeft.getBoundingClientRect();
+                const untransformedLeft = headingLeftRect.left - currentX;
+
+                const maxMove = Math.max(0, untransformedLeft - containerLeft);
+                return Math.min(headingLeft.offsetWidth, maxMove);
+            };
+
+            const getRightMoveDistance = () => {
+                if (!container) return headingRight.offsetWidth;
+                const containerRect = container.getBoundingClientRect();
+                const containerStyle = window.getComputedStyle(container);
+                const paddingRight = parseFloat(containerStyle.paddingRight) || 0;
+                const containerRight = containerRect.right - paddingRight;
+
+                const currentX = gsap.getProperty(headingRight, "x") || 0;
+                const headingRightRect = headingRight.getBoundingClientRect();
+                const untransformedRight = headingRightRect.right - currentX;
+
+                const maxMove = Math.max(0, containerRight - untransformedRight);
+                return Math.min(headingRight.offsetWidth, maxMove);
+            };
+
             gsap.to(headingLeft, {
-                xPercent: -100,
+                x: () => -getLeftMoveDistance(),
+                xPercent: 0,
                 ease: "none",
                 scrollTrigger: {
                     trigger: section,
@@ -836,7 +873,8 @@ window.addEventListener("load", () => {
             });
 
             gsap.to(headingRight, {
-                xPercent: 100,
+                x: () => getRightMoveDistance(),
+                xPercent: 0,
                 ease: "none",
                 scrollTrigger: {
                     trigger: section,
@@ -848,11 +886,17 @@ window.addEventListener("load", () => {
             });
         }
 
-        tl.to(cardsWrap, {
+        gsap.to(cardsWrap, {
             y: () => -getMoveDistance(),
             ease: "none",
-            duration: 1
-        }, 0);
+            scrollTrigger: {
+                trigger: section,
+                start: "top top",
+                end: () => (tl.scrollTrigger && tl.scrollTrigger.end) ? tl.scrollTrigger.end : "+=" + (getMoveDistance() + window.innerHeight / 2),
+                scrub: 1.2,
+                invalidateOnRefresh: true
+            }
+        });
     });
 
     mm.add("(min-width: 769px) and (max-width: 1199px)", () => {
@@ -930,7 +974,7 @@ window.addEventListener("load", () => {
                 start: "top top",
                 end: () => "+=" + getDynamicDistance(),
                 pin: true,
-                scrub: 0.5,
+                scrub: 1.2,
                 anticipatePin: 1,
                 invalidateOnRefresh: true,
                 fastScrollEnd: true,
