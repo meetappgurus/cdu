@@ -250,7 +250,7 @@ ul.f-menu li{margin:10px 0px;}
 .contact_us_form_main{ transform:scale(1) translateY(-50px); -webkit-transform:scale(1) translateY(-50px); -moz-transform:scale(1) translateY(-50px); -ms-transform:scale(1) translateY(-50px); -o-transform:scale(1) translateY(-50px); }
 .contact_us_sec{padding-top:0;padding-bottom:40px;border-top-left-radius: 20px; border-top-right-radius: 20px;}
 .lead-bg-landscap{position:relative;height:45vh;border-radius:20px;overflow:hidden;}
-.lead-bg-landscap img{object-position:left center;}
+.lead-bg-landscap img{object-position:left top;}
 
   .new-footer-main .container{max-width:720px;width:100%;}
   .new_review_link_main{margin:0px -3px 10px;height:calc(100% - 10px);}
@@ -317,6 +317,9 @@ ul.f-menu li{margin:10px 0px;}
   .footer-bottom-right ul{flex-direction:column;align-items:flex-start;}
   .footer-name-wp .footer-name{font-size:clamp(18px,9.5vw,58px);margin-top:30px;}
 }
+@media (max-width:575px){
+  .lead-bg-landscap {height: 42vh;}
+}
 @media (max-width:481px){
   .new_review_link_main .new_review_link_wp a.review_link{padding:10px 10px;}
   .inquiry_title h3{font-size:14px;}
@@ -330,6 +333,8 @@ ul.f-menu li{margin:10px 0px;}
   .footer-main-menu-link ul{justify-content:center;gap:10px;}
 }
 @media (max-width:370px){
+  .lead-bg-landscap {height: 38vh;}
+
   ul.f-menu{padding-left:0px;}
   ul.f-menu:first-child{padding-right:30px;}
   .new-footer-main address,.new-footer-main .address a,.new-footer-main .f_contact ul li a{font-size:14px;line-height:22px;}
