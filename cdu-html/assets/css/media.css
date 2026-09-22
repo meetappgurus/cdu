@@ -622,6 +622,7 @@
 	.work-features-slider .work-features-slide .work-features-box{padding:25px;border-radius:16px;}
 }
 @media (max-width:576px){
+	.up-events-sec {padding: 40px 0 0;}
 	.case-studies .cs-top-logo {max-width: 40px;max-height: 40px;}
 	.banner-links-main ul li.banner-links {font-size: 13px;}
 	.ltdp-cdu-discuss-bubble.home-ltdp .phn-icon img,.ltdp-cdu-discuss-bubble.home-ltdp .phn-icon{width:46px;height:34px;}

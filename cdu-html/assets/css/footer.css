@@ -111,7 +111,9 @@ ul.f-menu li{margin:10px 0px;}
 
 /* @madhavi */
 .cf-storefront-form .cf-form-title,.cf-storefront-form .cf-branding{display:none;}
-.contact_us_form_main .cf-storefront-form{background:transparent;max-width:100%;margin:0;border:none;border-radius:0;padding:0;box-shadow:none;}
+.contact_us_form_main .cf-storefront-form{background:transparent;max-width:100%;margin:0;border:none;border-radius:0;padding:0;box-shadow:none;min-height: 556px;}
+.contact_us_form_main .cf-storefront-form .cf-success-msg{min-height: calc(100% + 556px); display: flex; align-items: center;}
+
 .cf-storefront-form .cf-form-inner{display:block;}
 .cf-storefront-form .cf-form-title-divider{border-top:0;margin:0;}
 .cf-storefront-form .cf-label{display:none;}
@@ -125,7 +127,7 @@ ul.f-menu li{margin:10px 0px;}
 .cf-storefront-form .cf-form-desc::before{content:"";display:inline-block;width:16px;height:16px;vertical-align:middle;background:url("https://cdn.shopify.com/s/files/1/0786/1472/4748/files/lock.svg?v=1787648963") no-repeat center;background-size:contain;position:absolute;left:0;top:4px;}
 
 .lead-bg-landscap{position:absolute;inset:0;z-index:-1;}
-.lead-bg-landscap img{width:100%;height:100%;object-fit:cover;object-position:left center;}
+.lead-bg-landscap img{width:100%;height:100%;object-fit:cover;object-position:left top;}
 
 
 @media (max-width:1699.98px){
@@ -137,7 +139,7 @@ ul.f-menu li{margin:10px 0px;}
   .address h3.address-title .map-line{top:30px;height:200px;width:102px;}
 }
 @media (max-width:1599.98px){
-  .lead-bg-landscap img{ object-position: 25% center;}
+  .lead-bg-landscap img{ object-position: 25% top;}
   .new-footer-main .new-footer-top{padding:50px 0px;}
   .new-footer-menu{padding-bottom:40px;}
   ul.f-menu{padding-left:20px;}
@@ -157,7 +159,7 @@ ul.f-menu li{margin:10px 0px;}
   .address h3.address-title .map-line{top:30px;height:170px;width:94px;}
 }
 @media (max-width:1499.98px){
-  .lead-bg-landscap img {object-position: 20% center;}
+  .lead-bg-landscap img {object-position: 20% top;}
   .contact_us_form_main { transform: scale(0.9) translateX(20px); -webkit-transform: scale(0.9) translateX(20px); -moz-transform: scale(0.9) translateX(20px); -ms-transform: scale(0.9) translateX(20px); -o-transform: scale(0.9) translateX(20px); }
   .contact_us_sec {padding-top: 60px; padding-bottom: 60px;}
 
@@ -175,6 +177,8 @@ ul.f-menu li{margin:10px 0px;}
   .form-send-btn .btn{min-height:55px;}
 }
 @media (max-width:1399.98px){
+  .contact_us_form_main .cf-storefront-form { min-height: 450px;}
+  .contact_us_form_main .cf-storefront-form .cf-success-msg { min-height: calc(100% + 450px);}
   .cf-storefront-form .cf-submit-btn{border-radius:12px;-webkit-border-radius:12px;-moz-border-radius:12px;-ms-border-radius:12px;-o-border-radius:12px;}
   .new-footer-main .container{max-width:1140px;}
   ul.f-menu li a{font-size:14px;line-height:22px;}
@@ -210,7 +214,7 @@ ul.f-menu li{margin:10px 0px;}
   .call-mail-info .call-mail-link{font-size:12px;}
 }
 @media (max-width:1199.98px){
-.contact_us_sec {padding-top: 20px;padding-bottom: 20px;}
+  .contact_us_sec {padding-top: 20px;padding-bottom: 20px;}
 
   .cf-storefront-form .cf-submit-btn{border-radius:10px;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;font-size:14px;min-height:50px;}
   .new-footer-main .container{width:85%;}
@@ -247,6 +251,8 @@ ul.f-menu li{margin:10px 0px;}
   .f-icontext-main{margin-bottom:30px;}
 }
 @media (max-width:991.98px){
+.contact_us_form_main .cf-storefront-form,.contact_us_form_main .cf-storefront-form .cf-success-msg { min-height: auto;}
+.footer-name-wp {margin: 20px 0 0;}
 .contact_us_form_main{ transform:scale(1) translateY(-50px); -webkit-transform:scale(1) translateY(-50px); -moz-transform:scale(1) translateY(-50px); -ms-transform:scale(1) translateY(-50px); -o-transform:scale(1) translateY(-50px); }
 .contact_us_sec{padding-top:0;padding-bottom:40px;border-top-left-radius: 20px; border-top-right-radius: 20px;}
 .lead-bg-landscap{position:relative;height:45vh;border-radius:20px;overflow:hidden;}
@@ -315,7 +321,7 @@ ul.f-menu li{margin:10px 0px;}
   ul.f-menu li a{font-size:14px;}
   .form-bottom-text{margin-top:15px;}
   .footer-bottom-right ul{flex-direction:column;align-items:flex-start;}
-  .footer-name-wp .footer-name{font-size:clamp(18px,9.5vw,58px);margin-top:30px;}
+  .footer-name-wp .footer-name{font-size:clamp(18px,10vw,58px);margin-top:30px;}
 }
 @media (max-width:575px){
   .lead-bg-landscap {height: 42vh;}
