@@ -326,7 +326,7 @@ $(document).ready(function () {
         responsive: [{
             breakpoint: 1400,
             settings: {
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 2000,
                 slidesToShow: 3,
                 infinite: true,

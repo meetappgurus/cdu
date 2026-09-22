@@ -638,6 +638,7 @@
 	.ort-loc-wp .ort-loc-info{padding-left:0px;margin-top:20px;}
 
 	/* @madhavi */
+	.swae-logos-row .swae-logos {width: calc(50% - 30px);}
 	.case-studies .pagination-wrap {padding: 6px 6px; margin: 16px auto 0; left: 50%; transform: translateX(-50%);}
 	.case-studies .case-studies-option .cs-optin-item:nth-child(3)::after{display:none;}
 	.banner-sec.map-bg .banner-text-wrap{margin:10px 0;}
